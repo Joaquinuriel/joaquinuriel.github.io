@@ -1,6 +1,36 @@
 {
     "name": "Joaa",
-    "theme_color": "#ffffff",
+    "short_name": "Joaa",
+    "theme_color": "#ddffff",
     "background_color": "#ffffff",
-    "display": "standalone"
-}
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "assets/icons/64x64.png",
+            "type": "image/png",
+            "sizes": "64x64",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/icons/128x128.png",
+            "type": "image/png",
+            "sizes": "128x128",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/icons/256x256.png",
+            "type": "image/png",
+            "sizes": "256x256",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/icons/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+  }
