@@ -1,0 +1,45 @@
+@mixin flex($direction, $align, $justify)
+    display: flex
+    flex-direction: $direction 
+    align-items: $align
+    justify-content: $justify
+@mixin box($width, $height, $pad, $rad, $margin)
+    box-sizing: border-box
+    width: $width 
+    height: $height
+    padding: $pad
+    border-radius: $rad
+    margin: $margin
+    
+html
+    
+body 
+    display: flex 
+    flex-direction: column
+    margin: 0
+header
+    @include flex(row, center, center)
+    @include box(null, 120px, null, null, null)
+    
+    background: ivory
+    color: royalblue
+h1 
+    font: bold 36px Nexa
+    margin: 1em
+    a 
+        all: inherit
+h2 
+    font: 24px Nexa
+    margin: 1em
+    position: relative
+    width: fit-content
+    &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 50%
+        background: aliceblue
+        z-index: -1
+
