@@ -21,13 +21,17 @@ body
     flex-direction: column
     margin: 0
 header
-    @include flex(row, center, center)
-    @include box(null, 120px, null, null, null)
+    @include flex(row, null, null)
+    @include box(null, 60px, null, null, null)
     background: black
     color: #dff
+    transition: height .5s
+    &.open 
+        height: 100vh
 h1 
-    font: bold 36px Nexa
-    margin: 1em
+    font: bold 36px/12px Nexa
+    margin: 12px
+    flex: auto
 a 
     all: inherit
     cursor: pointer
@@ -46,7 +50,7 @@ h2
         background: #dff
         z-index: -1
 svg 
-    @include box(36px, 36px, null, null, null)
+    @include box(36px, 36px, null, null, 12px)
     fill: white
     
 
