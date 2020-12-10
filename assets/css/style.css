@@ -1,0 +1,8 @@
+@font-face {font-family: Nexa; font-display: swap; src: url(/assets/fonts/nexa/Nexa-Bold.otf); font-weight: 600}
+@font-face {font-family: Nexa; font-display: swap; src: url(/assets/fonts/nexa/Nexa-Light.otf); font-weight: 300}
+h1{
+    font: bold 36px Nexa
+}
+h2{
+    font: 24px Nexa
+}
