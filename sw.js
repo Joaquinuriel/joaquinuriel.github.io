@@ -1,5 +1,6 @@
 'serviceWorker' in navigator && navigator.serviceWorker.register('/sw.js');
 
-const cacheable = ['/index.html', '/sw.js', '/manifest.json'];
-self.addEventListener('install', e => e.waitUntil(caches.open('app').then(ch => ch.addAll(cacheable)).then(self.skipWaiting())));
-self.addEventListener('fetch', e => e.respondWith(fetch(e.request)))
+self.addEventListener('install', e => e.waitUntil(caches.open('app').then(ch => ch.addAll(['/sw.js', '/manifest.json'])).then(self.skipWaiting())));
+
+self.addEventListener('fetch', e => e.respondWith(caches.open('dynamic').then(cache => caches.match(e.request)
+    .then(res => (res || fetch(e.request).then(res => cache.put(e.request, response.clone()) && res))))));

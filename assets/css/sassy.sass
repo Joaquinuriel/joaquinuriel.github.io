@@ -32,17 +32,21 @@ header
         font: bold 36px/12px Nexa
         margin: 12px
         flex: auto
-h1 
+div 
+    width: fit-content
+    background: #dff
+h2
     font: bold 36px Nexa
     margin: 1em
 a 
     all: inherit
     cursor: pointer
-h2 
+p
     font: 24px Nexa
     margin: 1em
     position: relative
     width: fit-content
+    z-index: 1
     &::after
         content: ""
         position: absolute
@@ -50,7 +54,7 @@ h2
         left: 0
         width: 100%
         height: 50%
-        background: #dff
+        background: white
         z-index: -1
 svg 
     @include box(36px, 36px, null, null, 12px)

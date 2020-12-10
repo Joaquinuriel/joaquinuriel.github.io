@@ -3,6 +3,3 @@ await fetch(`/assets/ionicons/${s.innerHTML}.svg`).then(res => res.text().then(t
 
 setTimeout((menu = document.querySelector('header svg')) => menu.onclick = () => header.classList.toggle('open'))
 const header = document.querySelector('header')
-
-
-
