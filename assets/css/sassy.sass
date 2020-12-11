@@ -30,6 +30,8 @@
     font-weight: 300
     
 html
+    --indigo: #8000ff
+    --lightblue: #80ffaa
     ::-webkit-scrollbar
         display: none
     ::selection
@@ -73,14 +75,16 @@ h2
         left: 0
         @include box(100%, 50%, null, null, null)
         z-index: -1 
-        background: #80f
-        background: #80ffc4
+        background: #80ffaa
 p
     font: 24px Nexa
     text-align: justify
     position: relative
     margin: 0
     width: fit-content
+    text-decoration: underline 50% solid #80ffaa
+    text-decoration-skip-ink: none
+    text-underline-offset: -50%
     &::after
         content: ""
         position: absolute
