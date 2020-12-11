@@ -1,8 +1,8 @@
 {
     "name": "Joaa",
     "short_name": "Joaa",
-    "theme_color": "#ddffff",
-    "background_color": "#ffffff",
+    "theme_color": "#fff",
+    "background_color": "#fff",
     "display": "standalone",
     "orientation": "portrait",
     "scope": "/",
