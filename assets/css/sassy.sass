@@ -17,7 +17,15 @@
     padding: $pad
     border-radius: $rad
     margin: $margin
+@mixin content($background)
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: -1
+    background: $background
 
+    
 @font-face 
     font-family: Nexa
     font-display: swap
@@ -52,10 +60,23 @@ header
     transition: height .5s
     &.open 
         height: 100%
+        nav 
+            :nth-child(1)
+                transition: opacity .5s
+            :nth-child(2)
+                transition: opacity .5s .1s
+        a 
+            opacity: 1
     div 
         @include flex(row, null, space-between)
     nav 
         display: contents
+        a 
+            opacity: 0
+        :nth-child(1)
+            transition: opacity .5s .1s
+        :nth-child(2)
+            transition: opacity .5s 
     a 
         font: bold 36px/36px Nexa
         color: white
@@ -69,15 +90,10 @@ h2
     width: fit-content
     position: relative
     &::after 
-        content: ""
-        position: absolute
-        bottom: 0 
-        left: 0
+        @include content(#80ffaa)
         @include box(100%, 50%, null, null, null)
-        z-index: -1 
-        background: #80ffaa
 p
-    font: 24px Nexa
+    font: 24px/36px Nexa
     text-align: justify
     position: relative
     margin: 0
@@ -85,15 +101,6 @@ p
     text-decoration: underline 50% solid #80ffaa
     text-decoration-skip-ink: none
     text-underline-offset: -50%
-    &::after
-        content: ""
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-        height: 50%
-        background: white
-        z-index: -1
 
     
 
