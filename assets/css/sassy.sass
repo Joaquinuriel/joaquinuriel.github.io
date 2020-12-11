@@ -1,3 +1,10 @@
+@mixin fix($top, $right, $bottom, $left, $z)
+    position: fixed
+    top: $top
+    right: $right
+    bottom: $bottom
+    left: $left
+    z-index: $z
 @mixin flex($direction, $align, $justify)
     display: flex
     flex-direction: $direction 
@@ -10,6 +17,17 @@
     padding: $pad
     border-radius: $rad
     margin: $margin
+
+@font-face 
+    font-family: Nexa
+    font-display: swap
+    src: url(/assets/fonts/Nexa-Bold.otf)
+    font-weight: 600
+@font-face 
+    font-family: Nexa
+    font-display: swap
+    src: url(/assets/fonts/Nexa-Light.otf)
+    font-weight: 300
     
 html
     ::-webkit-scrollbar
@@ -17,36 +35,41 @@ html
     ::selection
         background: #dff
 body 
-    @include box(100vw, 100vh, null, null, 0)
+    position: fixed 
+    top: 0
+    @include box(100vw, 100vh, 60px 30px 0, null, 0)
     @include flex(column, null, null)
-    background: url(/assets/icons/512x512.png) center no-repeat
+    // background: url(/assets/icons/512x512.png) center no-repeat
 header
-    @include flex(row, null, null)
-    @include box(null, 60px, null, null, null)
+    @include fix(0, null, null, 0, 1)
+    @include flex(column, null, null)
+    @include box(100%, 60px, null, null, null)
     background: black
-    // color: #dff
     color: white
+    overflow: hidden
     transition: height .5s
     &.open 
-        height: 100vh
-    h1 
-        font: bold 36px/12px Nexa
+        height: 100%
+    div 
+        @include flex(row, null, space-between)
+    nav 
+        display: contents
+    a 
+        font: bold 36px/36px Nexa
+        color: white
+        text-decoration: none
         margin: 12px
-        flex: auto
-div 
-    background: #dff
+    svg 
+        @include box(36px, 36px, null, null, 12px)
+        fill: white
 h2
     font: bold 36px Nexa
-    margin: 1em
-a 
-    all: inherit
-    cursor: pointer
 p
     font: 24px Nexa
-    margin: 1em
+    text-align: justify
     position: relative
+    margin: 0
     width: fit-content
-    z-index: 1
     &::after
         content: ""
         position: absolute
@@ -56,8 +79,6 @@ p
         height: 50%
         background: white
         z-index: -1
-svg 
-    @include box(36px, 36px, null, null, 12px)
-    fill: white
+
     
 
