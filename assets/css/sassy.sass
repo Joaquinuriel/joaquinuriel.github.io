@@ -17,14 +17,15 @@ html
     ::selection
         background: #dff
 body 
-    display: flex 
-    flex-direction: column
-    margin: 0
+    @include box(100vw, 100vh, null, null, 0)
+    @include flex(column, null, null)
+    background: url(/assets/icons/512x512.png) center no-repeat
 header
     @include flex(row, null, null)
     @include box(null, 60px, null, null, null)
     background: black
-    color: #dff
+    // color: #dff
+    color: white
     transition: height .5s
     &.open 
         height: 100vh
@@ -33,7 +34,6 @@ header
         margin: 12px
         flex: auto
 div 
-    width: fit-content
     background: #dff
 h2
     font: bold 36px Nexa
