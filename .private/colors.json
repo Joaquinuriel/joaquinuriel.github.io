@@ -1,0 +1,15 @@
+{
+    "combinations": [
+        "goldenrod over yellow"
+    ],
+    "strong": {
+        "violet": "a0f",
+        "green": "0fa",
+        "yellow": "goldenrod"
+    },
+    "weak": {
+        "lightblue": "aff",
+        "green": "afa",
+        "yellow": "ffa"
+    }
+}
