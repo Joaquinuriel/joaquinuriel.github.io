@@ -45,7 +45,6 @@ html
     ::selection
         background: #dff
 body 
-    @include fix(0, null, null, null, null)
     @include box(100vw, null, 60px 30px 0, null, 0)
     @include flex(column, null, null)
 header
@@ -84,9 +83,9 @@ header
         @include box(36px, 36px, null, null, 12px)
         fill: white
 h2
-    font: bold 36px Nexa
-    width: fit-content
+    font: bold 17vw Nexa
     position: relative
+    margin: 0
     &::after 
         @include content(#80ffaa)
         @include box(100%, 50%, null, null, null)
