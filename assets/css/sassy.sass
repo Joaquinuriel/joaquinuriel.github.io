@@ -20,7 +20,8 @@
 @mixin content($background)
     content: ""
     position: absolute
-    bottom: 0
+    // bottom: 0
+    top: 50%
     left: 0
     z-index: -1
     background: $background
@@ -83,7 +84,7 @@ header
         @include box(36px, 36px, null, null, 12px)
         fill: white
 h2
-    font: bold 15vw Nexa
+    font: bold 15vw/15vw Nexa
     text-align: center
     position: relative
     margin: 10vh 10vw
