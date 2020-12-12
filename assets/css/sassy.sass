@@ -86,9 +86,12 @@ header
         @include box(36px, 36px, null, null, 12px)
 h2
     font: bold 15vw Nexa
+    color: white
     text-align: center
     position: relative
     margin: 10vh 10vw
+    &::first-line
+        color: black
     &::after 
         @include content(#0fa)
         @include box(100%, 50%, null, null, null)
