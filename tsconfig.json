@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "watch": true,
+        "sourceMap": true,
+        "removeComments": true,
+        "lib": ["DOM", "ESNext","WebWorker"]
+    }
+}
