@@ -96,14 +96,20 @@ h2
         @include content(#0fa)
         @include box(100%, 50%, null, null, null)
 h3 
-    font: bold 56px Nexa
+    font: bold 8vw Nexa
     color: white 
+    position: relative
     background: #0fa 
-    @include box(100%, 120px, 30px, null, null)
+    @include box(100%, 12vw, 30px, null, 30px 0px 90px)
     @include flex(null, center, null)
-    
-    // width: 100%
-    // height: 300px
+    &::after 
+        content: "Ipsum"
+        @include flex(null, center, null)
+        @include box(100%, 100%, 30px, null, null)
+        position: absolute
+        left: 50%
+        top: 50%
+        background: royalblue
 p
     font: bold 24px/36px Nexa
     text-align: justify
