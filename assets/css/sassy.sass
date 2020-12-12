@@ -17,10 +17,13 @@
     padding: $pad
     border-radius: $rad
     margin: $margin
+@mixin vis($visibility, $opacity)
+    visibility: $visibility
+    opacity: $opacity
+    
 @mixin content($background)
     content: ""
     position: absolute
-    // bottom: 0
     top: 50%
     left: 0
     z-index: -1
@@ -40,8 +43,6 @@
 
     
 html
-    --indigo: #8000ff
-    --lightblue: #80ffaa
     ::-webkit-scrollbar
         display: none
     ::selection
@@ -57,70 +58,42 @@ header
     backdrop-filter: blur(10px)
     color: white
     overflow: hidden
-    transition: .4s
+    transition: .5s
     &.open 
         height: 100%
         a 
-            opacity: 1
-            visibility: visible
+            @include vis(visible, 1)
     div 
         @include flex(row, null, space-between)
+        svg 
+            @include box(36px, 36px, null, null, null)
     nav 
         display: contents
         a 
-            opacity: 0
-            visibility: hidden
-        svg 
-            @include fix(null, 15px, 15px, null, 1)
-            opacity: 0
-            visibility: hidden
-            transition: .5s .5s
+            @include vis(hidden, 0)
     a 
         font: bold 36px/36px Nexa
         color: inherit
         text-decoration: none
-        display: inline-flex
-    svg 
-        @include box(36px, 36px, null, null, null)
+        transition: .5s
 h2
     font: bold 15vw Nexa
     color: white
     text-align: center
-    position: relative
     margin: 10vh 10vw
     background: linear-gradient(white 50%, #0fa 50%)
     &::first-line
         color: black
-    // &::after 
-    //     @include content(#0fa)
-    //     @include box(100%, 50%, null, null, null)
 h3 
     font: bold 6vh Nexa
     color: white 
-    position: relative
     background: #0fa 
-    @include box(100%, 12vh, 30px, null, 30px 0px 90px)
+    @include box(100%, 12vh, 30px, null, null)
     @include flex(null, center, null)
-    // &::after 
-    //     content: "Ipsum"
-    //     @include flex(null, center, null)
-    //     @include box(50%, 100%, 30px, null, null)
-    //     position: absolute
-    //     left: 50%
-    //     top: 50%
-    //     background: royalblue
 p
     font: bold 24px/36px Nexa
     text-align: justify
     margin: 0 30px
-    // text-decoration: underline 50% solid #80ffaa 
-    // text-decoration-line: underline 
-    // text-decoration-style: solid
-    // text-decoration-skip-ink: none
-    // text-decoration-thickness: 12px
-    // text-underline-offset: -12px
-    // text-decoration-color: #80ffaa
-    
     
 
     

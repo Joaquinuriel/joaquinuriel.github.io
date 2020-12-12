@@ -8,4 +8,3 @@ const aa = header.querySelectorAll('a');
 window.onscroll = () => window.scrollY > 0 ?
     (header.style.backgroundColor = "#fffe", header.style.color = "royalblue") :
     (header.style.backgroundColor = "#0fa", header.style.color = "white");
-//# sourceMappingURL=app.js.map
