@@ -8,4 +8,6 @@ const aa = header.querySelectorAll('a');
 window.onscroll = () => window.scrollY > 0 ?
     (header.style.backgroundColor = "#fffe", header.style.color = "royalblue") :
     (header.style.backgroundColor = "#0fa", header.style.color = "white");
+const qr = header.querySelector('nav svg');
+qr.addEventListener('click', () => qr.classList.add('qr'));
 //# sourceMappingURL=app.js.map
