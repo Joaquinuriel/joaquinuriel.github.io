@@ -60,16 +60,8 @@ header
     transition: .4s
     &.open 
         height: 100%
-        nav 
-            :nth-child(1)
-                transition: opacity .4s
-            :nth-child(2)
-                transition: opacity .4s .2s
         a 
             opacity: 1
-            visibility: visible
-        svg 
-            opacity: 1 
             visibility: visible
     div 
         @include flex(row, null, space-between)
@@ -78,29 +70,16 @@ header
         a 
             opacity: 0
             visibility: hidden
-        :nth-child(1)
-            transition: opacity .4s .2s
-        :nth-child(2)
-            transition: opacity .4s 
         svg 
             @include fix(null, 15px, 15px, null, 1)
             opacity: 0
             visibility: hidden
             transition: .5s .5s
-        svg.qr 
-            @include box(300px, 300px, null, null, null)
-            color: transparent
-            background: url(https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=joaquinuriel.github.io)
     a 
         font: bold 36px/36px Nexa
         color: inherit
         text-decoration: none
         display: inline-flex
-        &:target
-            background: url(https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=joaquinuriel.github.io)
-            opacity: 0
-            transition: .4s
-            @include box(300px, 300px, null, null, null)
     svg 
         @include box(36px, 36px, null, null, null)
 h2
