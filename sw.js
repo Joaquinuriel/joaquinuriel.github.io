@@ -6,3 +6,5 @@ self.addEventListener('fetch', e => e.respondWith(fetch(e.request)))
 //     .then(res => caches.open('fallback').then(cache => cache.put(e.request, res.clone()) && res))
 //     .catch(() => caches.match(e.request))
 // ))
+
+Headers
