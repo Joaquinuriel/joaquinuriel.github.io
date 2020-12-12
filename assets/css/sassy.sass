@@ -49,10 +49,11 @@ html
 body 
     @include box(100vw, null, 60px 0 0, null, 0)
     @include flex(column, null, null)
+    // background: url(https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=joaquinuriel.github.io)
 header
     @include fix(0, null, null, 0, 1)
     @include flex(column, null, null)
-    @include box(100%, 60px, null, null, null)
+    @include box(100%, 60px, 12px, null, null)
     background: #0fa
     backdrop-filter: blur(10px)
     color: white
@@ -81,9 +82,13 @@ header
         font: bold 36px/36px Nexa
         color: inherit
         text-decoration: none
-        margin: 12px
+        display: inline-flex
+        &:target
+            background: url(https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=joaquinuriel.github.io)
+            @include box(300px, 300px, null, null, null)
+            transition: .4s
     svg 
-        @include box(36px, 36px, null, null, 12px)
+        @include box(36px, 36px, null, null, null)
 h2
     font: bold 15vw Nexa
     color: white
