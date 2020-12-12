@@ -45,7 +45,7 @@ html
     ::selection
         background: #dff
 body 
-    @include box(100vw, null, 60px 30px 0, null, 0)
+    @include box(100vw, null, 60px 0 0, null, 0)
     @include flex(column, null, null)
 header
     @include fix(0, null, null, 0, 1)
@@ -84,6 +84,7 @@ header
         fill: white
 h2
     font: bold 17vw Nexa
+    text-align: center
     position: relative
     margin: 0
     &::after 
@@ -93,7 +94,7 @@ p
     font: 24px/36px Nexa
     text-align: justify
     position: relative
-    margin: 0
+    margin: 0 30px
     width: fit-content
     // text-decoration: underline 50% solid #80ffaa 
     // text-decoration-line: underline 
