@@ -6,5 +6,5 @@ setTimeout((menu = document.querySelector('header svg')) => menu.onclick = () =>
 const header = document.querySelector('header')
 const aa = header.querySelectorAll('a')
 window.onscroll = () => window.scrollY > 0? 
-    (header.style.backgroundColor = "#fffe", header.style.color = "black") :
-    (header.style.backgroundColor = "black", header.style.color = "white")
+    (header.style.backgroundColor = "#fffe", header.style.color = "royalblue") :
+    (header.style.backgroundColor = "#0fa", header.style.color = "white")
