@@ -7,8 +7,8 @@ menu.addEventListener('click', () => header.classList.toggle('open'))
 const header = document.querySelector('header')
 const aa = header.querySelectorAll('a')
 window.onscroll = () => window.scrollY > 0? 
-    (header.style.backgroundColor = "#fffe", header.style.color = "royalblue") :
-    (header.style.backgroundColor = "royalblue", header.style.color = "white")
+    (header.style.backgroundColor = "#fffe", header.style.color = "#royalblue") :
+    (header.style.backgroundColor = "#0fa", header.style.color = "white")
 
 // const qr = header.querySelector('nav svg')
 // qr.addEventListener('click', () => qr.classList.toggle('qr'))
@@ -17,7 +17,7 @@ window.onscroll = () => window.scrollY > 0?
 // let socket = new WebSocket("wss://joaquinuriel.github.io");
 // socket.onopen = (e) => {
 //     alert("[open] Connection established")
-//     alert("Sending to server")
+//     alert("Sending to server") 
 //     socket.send("My name is John")
 // };
 // socket.onmessage = (event) => {
