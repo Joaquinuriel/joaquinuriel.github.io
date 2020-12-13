@@ -7,7 +7,7 @@ menu.addEventListener('click', () => header.classList.toggle('open'))
 const header = document.querySelector('header')
 const aa = header.querySelectorAll('a')
 window.onscroll = () => window.scrollY > 0? 
-    (header.style.backgroundColor = "#fffe", header.style.color = "#royalblue") :
+    (header.style.backgroundColor = "#fffe", header.style.color = "royalblue") :
     (header.style.backgroundColor = "#0fa", header.style.color = "white")
 
 // const qr = header.querySelector('nav svg')
