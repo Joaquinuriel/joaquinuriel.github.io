@@ -20,16 +20,6 @@
 @mixin vis($visibility, $opacity)
     visibility: $visibility
     opacity: $opacity
-    
-@mixin content($background)
-    content: ""
-    position: absolute
-    top: 50%
-    left: 0
-    z-index: -1
-    background: $background
-
-    
 @font-face 
     font-family: Nexa
     font-display: swap
@@ -46,18 +36,17 @@ html
     ::-webkit-scrollbar
         display: none
     ::selection
-        background: #0FA
+        background: royalblue
 body 
     @include box(100vw, null, 60px 0 0, null, 0)
     @include flex(column, null, null)
 header
     @include fix(0, null, null, 0, 1)
     @include flex(column, null, null)
-    @include box(100%, 60px, 12px, null, null)
-    background: #0fa
+    @include box(100%, 60px, null, null, null)
+    background: royalblue
     backdrop-filter: blur(10px)
     color: white
-    overflow: hidden
     transition: .5s
     &.open 
         height: 100%
@@ -66,28 +55,29 @@ header
     div 
         @include flex(row, null, space-between)
         svg 
-            @include box(36px, 36px, null, null, null)
+            @include box(36px, 36px, null, null, 12px)
     nav 
-        display: contents
+        @include flex(column, null, null)
         a 
             @include vis(hidden, 0)
     a 
         font: bold 36px/36px Nexa
         color: inherit
         text-decoration: none
+        margin: 12px
         transition: .5s
 h2
     font: bold 15vw Nexa
     color: white
     text-align: center
     margin: 10vh 10vw
-    background: linear-gradient(white 50%, #0fa 50%)
+    background: linear-gradient(white 50%, royalblue 50%)
     &::first-line
         color: black
 h3 
     font: bold 6vh Nexa
     color: white 
-    background: #0fa 
+    background: royalblue 
     @include box(100%, 12vh, 30px, null, null)
     @include flex(null, center, null)
 p
