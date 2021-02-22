@@ -11,13 +11,28 @@
 
     &__content
         height: 300px
-        background: var(--charcoal)
+        flex-direction: column
+        background: #222
 
     &__title
-        font: bold x-large Montserrat
+        font: bold large Montserrat
 
+        flex: auto
         padding: var(--padding)
         margin: auto 0px
+
+    &__link svg
+        width: 36px
+        height: 36px
+        margin: 12px
+
+        fill: white
+
+    &__subtitle
+        font: 500 large Montserrat
+
+        padding: var(--padding)
+        margin: var(--margin)
 
     &__text
         font: large Montserrat

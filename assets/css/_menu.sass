@@ -15,8 +15,15 @@
 
     transition: 250ms
 
+    &.hidden
+        
+        visibility: hidden
+        opacity: 0
+        top: 100px
+
     &__btn
         font: small-caps large Montserrat
+        color: white
 
         width: fit-content
         height: 45px
@@ -24,28 +31,27 @@
         border-radius: 1em
         margin: 1em 0em
 
-        background: none
+        background: var(--blue)
+        box-shadow: 0px 15px 15px -10px var(--blue)
         border: none
         outline: none
 
         cursor: pointer
         transition: 250ms
 
-        &--filled
-            @extend .menu__btn
-            color: white
-            background: var(--blue)
-            box-shadow: 0px 15px 15px -10px var(--blue)
-
-            &:hover 
-                background: var(--charcoal)
-                box-shadow: none
+        &:hover 
+            background: var(--charcoal)
+            box-shadow: none
 
         &--golden
             @extend .menu__btn
-            color: white
             background: linear-gradient(to right bottom, gold, goldenrod)
             box-shadow: 0px 15px 15px -10px goldenrod
 
             &:hover 
+                background: linear-gradient(to right bottom, gold, goldenrod)
                 box-shadow: none
+
+        &--last 
+            @extend .menu__btn
+            // margin: auto 0em 1em auto
