@@ -1,4 +1,4 @@
-header 
+.header 
     height: 60px 
 
     display: flex
@@ -6,16 +6,27 @@ header
     justify-content: space-between
 
     color: white
-    background: royalblue 
+    background: var(--charcoal)
 
-    a 
-        font: bold large Montserrat
+    &__title
+        font: bold x-large Montserrat
         color: white
-        text-decoration: none
 
-        margin: auto 15px
+        margin: auto 30px
+
+    &__btn
+        color: white 
+
+        padding: 0px 15px
+        border-radius: 30px
+        margin: auto 0px
+
+        background: none
+        border: none
+        outline: none
+
+        cursor: pointer
 
     svg 
-        width: 30px 
-        height: 30px
-        margin: auto 15px
+        width: 36px 
+        height: 36px

@@ -1,4 +1,23 @@
-footer 
-    height: 60px 
+.footer 
+    width: 100%
 
-    background: royalblue
+    &__header, &__content
+        color: white
+        display: flex
+
+    &__header
+        height: 60px
+        background: var(--cerulean)
+
+    &__content
+        height: 300px
+        background: var(--charcoal)
+
+    &__title
+        font: bold x-large Montserrat
+
+        padding: var(--padding)
+        margin: auto 0px
+
+    &__text
+        font: large Montserrat
