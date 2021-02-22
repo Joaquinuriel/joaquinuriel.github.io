@@ -1,0 +1,19 @@
+{
+    "title": {
+        "weight": 900,
+        "size": "48px"
+    },
+    "subtitle": {
+        "size": "32px"
+    },
+    "h3": {
+        "size": "24px"
+    },
+    "h4": {
+        "size": "19.2px"
+    },
+    "h5": {
+        "size": "18px"
+    },
+    "h6": {}
+}

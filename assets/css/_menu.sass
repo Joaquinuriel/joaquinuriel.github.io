@@ -20,31 +20,32 @@
 
         width: fit-content
         height: 45px
-        padding: 0px 30px
-        border-radius: 15px
-        margin: 15px 0px
+        padding: 0em 1em
+        border-radius: 1em
+        margin: 1em 0em
 
         background: none
-        // box-shadow: 0px 15px 15px -10px var(--cerulean)
         border: none
         outline: none
 
         cursor: pointer
         transition: 250ms
 
-        // &:hover
-        //     color: var(--cerulean)
-
         &--filled
             @extend .menu__btn
             color: white
-            background: var(--cerulean)
-            box-shadow: 0px 15px 15px -10px var(--cerulean)
+            background: var(--blue)
+            box-shadow: 0px 15px 15px -10px var(--blue)
 
             &:hover 
-                color: white
                 background: var(--charcoal)
                 box-shadow: none
 
+        &--golden
+            @extend .menu__btn
+            color: white
+            background: linear-gradient(to right bottom, gold, goldenrod)
+            box-shadow: 0px 15px 15px -10px goldenrod
 
-    
+            &:hover 
+                box-shadow: none
