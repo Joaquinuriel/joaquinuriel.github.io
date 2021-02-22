@@ -1,90 +1,10 @@
-@mixin fix($top, $right, $bottom, $left, $z)
-    position: fixed
-    top: $top
-    right: $right
-    bottom: $bottom
-    left: $left
-    z-index: $z
-@mixin flex($direction, $align, $justify)
-    display: flex
-    flex-direction: $direction 
-    align-items: $align
-    justify-content: $justify
-@mixin box($width, $height, $pad, $rad, $margin)
-    box-sizing: border-box
-    width: $width 
-    height: $height
-    padding: $pad
-    border-radius: $rad
-    margin: $margin
-@mixin vis($visibility, $opacity)
-    visibility: $visibility
-    opacity: $opacity
-@font-face 
-    font-family: Nexa
-    font-display: swap
-    src: url(/assets/fonts/Nexa-Bold.otf)
-    font-weight: 600
-@font-face 
-    font-family: Nexa
-    font-display: swap
-    src: url(/assets/fonts/Nexa-Light.otf)
-    font-weight: 300
+@import fonts 
+@import header
+@import footer
+@import menu
 
-    
-html
-    ::-webkit-scrollbar
-        display: none
-    ::selection
-        background: #0fa
-body 
-    @include box(100vw, null, 60px 0 0, null, 0)
-    @include flex(column, null, null)
-header
-    @include fix(0, null, null, 0, 1)
-    @include flex(column, null, null)
-    @include box(100%, 60px, null, null, null)
-    background: #0fa
-    backdrop-filter: blur(10px)
-    color: white
-    transition: .5s
-    &.open 
-        height: 100%
-        a 
-            @include vis(visible, 1)
-    div 
-        @include flex(row, null, space-between)
-        svg 
-            @include box(36px, 36px, null, null, 12px)
-    nav 
-        @include flex(column, null, null)
-        a 
-            @include vis(hidden, 0)
-    a 
-        font: bold 36px/36px Nexa
-        color: inherit
-        text-decoration: none
-        margin: 12px
-        transition: .5s
-h2
-    font: bold 15vw Nexa
-    color: white
-    text-align: center
-    margin: 10vh 10vw
-    background: linear-gradient(white 50%, #0fa 50%)
-    &::first-line
-        color: black
-h3 
-    font: bold 6vh Nexa
-    color: white 
-    background: #0fa 
-    @include box(100%, 12vh, 30px, null, null)
-    @include flex(null, center, null)
-p
-    font: bold 24px/36px Nexa
-    text-align: justify
-    margin: 0 30px
-    
+body
+    margin: 0px
 
-    
-
+    h1 
+        font: 900 60px Montserrat

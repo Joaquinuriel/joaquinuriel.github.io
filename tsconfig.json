@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
         "watch": true,
         "removeComments": true,
         "lib": ["DOM", "ESNext","WebWorker"]
