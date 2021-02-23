@@ -1,0 +1,21 @@
+{
+  "name": "joaquinuriel.github.io",
+  "description": "",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "python -m http.server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquinuriel/joaquinuriel.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquinuriel/joaquinuriel.github.io/issues"
+  },
+  "homepage": "https://joaquinuriel.github.io"
+}

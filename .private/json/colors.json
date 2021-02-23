@@ -1,4 +1,7 @@
 {
-    "primary": "royalblue",
-    "secondary": ""
+    "primary": {
+        "name": "royal blue",
+        "rgb": "65 105 225"
+    },
+    "secondary": {}
 }

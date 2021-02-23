@@ -1,29 +1,36 @@
 {
     "title": {
-        "purpose": "header title",
-        "size": "48px",
+        "purpose": "main title",
+        "size": "60px",
         "weight": 900
     },
     "subtitle": {
+        "purpose": "second title",
+        "size": "48px",
+        "weight": 700
+    },
+    "h3": {
         "purpose": "content title",
         "size": "32px",
         "weight": 700
     },
-    "h3": {
-        "purpose": "content subtitle",
+    "h4": {
+        "purpose": "generic title",
         "size": "24px",
         "weight": 700
     },
-    "h4": {
-        "size": "19.2px",
-        "weight": 700
-    },
     "h5": {
+        "purpose": "footer title",
         "size": "24px",
         "weight": 700
     },
     "h6": {
+        "purpose": "footer subtitle",
         "size": "24px",
         "weight": 700
+    },
+    "text": {
+        "size": "18px",
+        "weight": 400
     }
 }
