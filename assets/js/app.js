@@ -7,9 +7,7 @@ let header = document.querySelector("header");
 let menu = document.getElementById("menu");
 let headerBtn = header.querySelector("button");
 headerBtn.addEventListener("click", () => {
-    header.classList.toggle("header");
     menu.classList.toggle("menu");
-    header.classList.toggle("header--bottom");
     menu.classList.toggle("menu--hidden");
 });
 let clearCache = document.getElementById("clear-cache");

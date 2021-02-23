@@ -1,0 +1,59 @@
+.menu
+    position: fixed
+    top: 0px
+    left: 0px
+    z-index: 1
+
+    width: 100%
+    height: 100%
+    box-sizing: border-box
+    padding-top: 60px
+
+    display: flex
+    flex-direction: column
+
+    background: white
+
+    transition: 250ms
+
+    &--hidden
+        @extend .menu
+        visibility: hidden
+        opacity: 0
+        
+
+    &__btn
+        font: 500 large Montserrat
+        font-variant: all-small-caps
+        color: white
+
+        // width: fit-content
+        height: 45px
+        padding: var(--padding)
+        border-radius: 1em
+        margin: 1em 30px
+
+        background: var(--blue)
+        box-shadow: var(--shadow) var(--blue)
+        border: none
+        outline: none
+
+        cursor: pointer
+        transition: 250ms
+
+        &:hover 
+            background: var(--charcoal)
+            box-shadow: none
+
+        &--golden
+            @extend .menu__btn
+            background: linear-gradient(to right bottom, gold, goldenrod)
+            box-shadow: var(--shadow) goldenrod
+
+            &:hover 
+                background: linear-gradient(to right bottom, gold, goldenrod)
+                box-shadow: none
+
+        &--last 
+            @extend .menu__btn
+            // margin: auto 0em 1em auto
