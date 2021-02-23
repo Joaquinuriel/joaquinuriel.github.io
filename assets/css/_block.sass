@@ -1,2 +1,20 @@
 .block
-    // height: calc( 100vh - 90px )
+    display: block
+
+    &--main
+        @extend .block
+        // min-height: calc(100vh - 90px)
+
+    &__title
+        font: 900 60px Montserrat
+
+    &__text
+        font: large Montserrat
+        text-align: justify
+
+        &--larger 
+            @extend .block__text 
+            font: 500 larger Montserrat
+            letter-spacing: -0.05em
+
+            margin: 2em 0em
