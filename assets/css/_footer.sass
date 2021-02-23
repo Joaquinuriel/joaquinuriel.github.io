@@ -3,16 +3,18 @@
 
     &__header, &__content
         color: white
-        display: flex
 
     &__header
         height: 60px
+
+        display: flex
         align-items: center
+        
         background: var(--blue)
 
     &__content
         height: 300px
-        flex-direction: column
+        contain: strict
         background: var(--dark)
 
     &__title
@@ -23,8 +25,8 @@
         margin: auto 0px
 
     &__link svg
-        width: 36px
-        height: 36px
+        width: 30px
+        height: 30px
         padding: var(--padding)
 
         fill: white
