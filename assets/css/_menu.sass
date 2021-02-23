@@ -31,7 +31,7 @@
         margin: 1em 0em
 
         background: var(--blue)
-        box-shadow: 0px 15px 15px -10px var(--blue)
+        box-shadow: var(--shadow) var(--blue)
         border: none
         outline: none
 
@@ -45,7 +45,7 @@
         &--golden
             @extend .menu__btn
             background: linear-gradient(to right bottom, gold, goldenrod)
-            box-shadow: 0px 15px 15px -10px goldenrod
+            box-shadow: var(--shadow) goldenrod
 
             &:hover 
                 background: linear-gradient(to right bottom, gold, goldenrod)
