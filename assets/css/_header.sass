@@ -16,9 +16,13 @@
 
     transition: top 250ms
 
+
     &--bottom 
         @extend .header
-        top: calc( 100vh - 60px )
+        @media (display-mode: standalone)
+            top: calc( 100vh - 60px )
+        // @media (display-mode: browser)
+            
 
     &__title
         font: 900 x-large Montserrat

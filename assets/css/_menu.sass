@@ -1,6 +1,6 @@
 .menu
     position: fixed
-    top: 0px
+    top: 60px
     left: 0px
 
     width: 100%
@@ -19,6 +19,8 @@
         @extend .menu
         visibility: hidden
         opacity: 0
+        @media (display-mode: standalone)
+            top: 0px
 
     &__btn
         font: small-caps large Montserrat
