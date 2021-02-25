@@ -10,5 +10,15 @@ headerBtn.addEventListener("click", () => {
     menu.classList.toggle("menu");
     menu.classList.toggle("menu--hidden");
 });
+let flexBtn = document.querySelector(".flex button");
+flexBtn.addEventListener("click", () => window.alert("alert"));
 let clearCache = document.getElementById("clear-cache");
 clearCache.addEventListener("click", () => localStorage.clear());
+let toast = document.getElementById("toast");
+let para = toast.querySelector("p");
+const say = (message) => {
+    para.innerHTML = message;
+    toast.style.top = "60px";
+};
+toast.addEventListener("click", () => toast.style = null);
+say("hi");

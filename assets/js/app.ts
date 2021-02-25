@@ -16,8 +16,20 @@ headerBtn.addEventListener("click", () => {
     menu.classList.toggle("menu--hidden")
 })
 
-// document.createElement("")
+let flexBtn = document.querySelector(".flex button")
+flexBtn.addEventListener("click", () => window.alert("alert"))
 
+// document.createElement("")
 
 let clearCache = document.getElementById("clear-cache")
 clearCache.addEventListener("click", () => localStorage.clear())
+
+let toast = document.getElementById("toast")
+let para = toast.querySelector("p")
+const say = (message: string) => {
+    para.innerHTML = message
+    toast.style.top = "60px"
+}
+toast.addEventListener("click", () => toast.style = null)
+
+say("hi")

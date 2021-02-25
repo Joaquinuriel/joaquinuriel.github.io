@@ -1,0 +1,25 @@
+.toast
+    position: fixed
+    top: -120px
+    left: 50%
+
+    transform: translateX(-50%)
+
+    height: 60px
+    padding: var(--padding)
+    border-radius: 30px
+    margin: var(--margin)
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    background: var(--white)
+    backdrop-filter: blur(20px)
+
+    transition: top 250ms
+
+    &__text
+        font: 500 large Montserrat
+        user-select: none
+        margin: 0px
