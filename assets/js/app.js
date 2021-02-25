@@ -21,4 +21,4 @@ const say = (message) => {
     toast.style.top = "60px";
 };
 toast.addEventListener("click", () => toast.style = null);
-say("hi");
+setTimeout(() => say("hello there"), 250);

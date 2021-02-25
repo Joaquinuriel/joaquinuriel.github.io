@@ -32,4 +32,4 @@ const say = (message: string) => {
 }
 toast.addEventListener("click", () => toast.style = null)
 
-say("hi")
+setTimeout(() => say("hello there"), 250)
