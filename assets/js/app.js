@@ -7,6 +7,7 @@ let header = document.querySelector("header");
 let menu = document.getElementById("menu");
 let headerBtn = header.querySelector("button");
 headerBtn.addEventListener("click", () => {
+    document.body.classList.toggle("locked");
     menu.classList.toggle("menu");
     menu.classList.toggle("menu--hidden");
 });
