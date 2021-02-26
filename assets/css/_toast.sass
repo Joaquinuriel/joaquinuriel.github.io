@@ -1,6 +1,7 @@
 .toast
     position: fixed
-    top: -120px
+    // top: -120px
+    bottom: -120px
     left: 50%
     z-index: 3
 
@@ -9,19 +10,20 @@
     height: 60px
     padding: var(--padding)
     border-radius: 30px
-    margin: 1em 0px
+    margin: var(--margin)
 
     display: flex
     align-items: center
     justify-content: center
 
-    // background: rgba(0, 0, 0, 0.5)
+    // background: var(--white)
+    background: rgba(0, 0, 0, 0.5)
     // background: rgba(65, 105, 225, 0.5)
-    background: var(--red)
-    // backdrop-filter: blur(20px)
-    // -webkit-backdrop-filter: blur(20px)
+    // background: var(--red)
+    backdrop-filter: blur(20px)
+    -webkit-backdrop-filter: blur(20px)
 
-    transition: top 500ms
+    transition: bottom 500ms
 
     &__text
         font: 500 large Montserrat

@@ -21,7 +21,7 @@ let toast = document.getElementById("toast")
 let para = toast.querySelector("p")
 const say = (message: string) => {
     para.innerHTML = message
-    toast.style.top = "0px"
+    toast.style.bottom = "0px"
 }
 
 let flexBtn = document.querySelector(".flex button")
@@ -36,4 +36,4 @@ updateIcons.addEventListener("click", () => {
 })
 
 
-toast.addEventListener("click", () => toast.style.top = null)
+toast.addEventListener("click", () => toast.style.bottom = null)

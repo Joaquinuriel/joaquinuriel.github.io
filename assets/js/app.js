@@ -15,7 +15,7 @@ let toast = document.getElementById("toast");
 let para = toast.querySelector("p");
 const say = (message) => {
     para.innerHTML = message;
-    toast.style.top = "0px";
+    toast.style.bottom = "0px";
 };
 let flexBtn = document.querySelector(".flex button");
 flexBtn.addEventListener("click", () => say("hello there"));
@@ -24,4 +24,4 @@ updateIcons.addEventListener("click", () => {
     localStorage.clear();
     say("Iconos actualizados");
 });
-toast.addEventListener("click", () => toast.style.top = null);
+toast.addEventListener("click", () => toast.style.bottom = null);
