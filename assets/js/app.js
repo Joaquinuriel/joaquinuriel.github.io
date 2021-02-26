@@ -11,11 +11,13 @@ headerBtn.addEventListener("click", () => {
     menu.classList.toggle("menu");
     menu.classList.toggle("menu--hidden");
 });
+let body = document.body;
 let toast = document.getElementById("toast");
 let para = toast.querySelector("p");
 const say = (message) => {
     para.innerHTML = message;
-    toast.style.bottom = "0px";
+    toast.style.top = "60px";
+    body.style.backgroundColor = "#aaa";
 };
 let flexBtn = document.querySelector(".flex button");
 flexBtn.addEventListener("click", () => say("hello there"));
