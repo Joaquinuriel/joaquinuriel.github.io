@@ -10,14 +10,17 @@ headerBtn.addEventListener("click", () => {
     menu.classList.toggle("menu");
     menu.classList.toggle("menu--hidden");
 });
-let flexBtn = document.querySelector(".flex button");
-flexBtn.addEventListener("click", () => say("hello there"));
-let updateIcons = document.getElementById("clear-cache");
-updateIcons.addEventListener("click", () => localStorage.clear());
 let toast = document.getElementById("toast");
 let para = toast.querySelector("p");
 const say = (message) => {
     para.innerHTML = message;
-    toast.style.top = "60px";
+    toast.style.top = "0px";
 };
+let flexBtn = document.querySelector(".flex button");
+flexBtn.addEventListener("click", () => say("hello there"));
+let updateIcons = document.getElementById("clear-cache");
+updateIcons.addEventListener("click", () => {
+    localStorage.clear();
+    say("Iconos actualizados");
+});
 toast.addEventListener("click", () => toast.style.top = null);

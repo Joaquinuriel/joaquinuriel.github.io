@@ -16,18 +16,23 @@ headerBtn.addEventListener("click", () => {
     menu.classList.toggle("menu--hidden")
 })
 
+let toast = document.getElementById("toast")
+let para = toast.querySelector("p")
+const say = (message: string) => {
+    para.innerHTML = message
+    toast.style.top = "0px"
+}
+
 let flexBtn = document.querySelector(".flex button")
 flexBtn.addEventListener("click", () => say("hello there"))
 
 // document.createElement("")
 
 let updateIcons = document.getElementById("clear-cache")
-updateIcons.addEventListener("click", () => localStorage.clear())
+updateIcons.addEventListener("click", () => {
+    localStorage.clear()
+    say("Iconos actualizados")
+})
 
-let toast = document.getElementById("toast")
-let para = toast.querySelector("p")
-const say = (message: string) => {
-    para.innerHTML = message
-    toast.style.top = "60px"
-}
+
 toast.addEventListener("click", () => toast.style.top = null)
