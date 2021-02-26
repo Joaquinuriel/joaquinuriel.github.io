@@ -26,4 +26,7 @@ updateIcons.addEventListener("click", () => {
     localStorage.clear();
     say("Iconos actualizados");
 });
-toast.addEventListener("click", () => toast.style.bottom = null);
+toast.addEventListener("click", () => {
+    toast.style.top = null;
+    body.style.backgroundColor = null;
+});
