@@ -17,19 +17,26 @@ headerBtn.addEventListener("click", () => {
 })
 
 let flexBtn = document.querySelector(".flex button")
-flexBtn.addEventListener("click", () => window.alert("alert"))
+flexBtn.addEventListener("click", () => say("hello there"))
 
 // document.createElement("")
 
 let clearCache = document.getElementById("clear-cache")
 clearCache.addEventListener("click", () => localStorage.clear())
 
+let toasted = false
 let toast = document.getElementById("toast")
 let para = toast.querySelector("p")
 const say = (message: string) => {
     para.innerHTML = message
     toast.style.top = "60px"
+    toasted = true
+    setTimeout(() => {
+        toast.style.top = null
+        toasted = false
+    }, 5000)
 }
-toast.addEventListener("click", () => toast.style = null)
+toast.addEventListener("click", () => toast.style.top = null)
+// window.addEventListener("click", () => toasted === true && (toast.style.top = null))
 
-setTimeout(() => say("hello there"), 250)
+setTimeout(() => say("hello there"), 1000)

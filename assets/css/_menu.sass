@@ -9,8 +9,8 @@
     box-sizing: border-box
     padding-top: 60px
 
-    display: flex
-    flex-direction: column
+    // display: flex
+    // flex-direction: column
 
     background: white
 
@@ -20,8 +20,24 @@
         @extend .menu
         visibility: hidden
         opacity: 0
-        
 
+    &__text
+        font: bold large Montserrat
+        color: var(--dark)
+
+        padding: var(--padding)
+        margin: var(--margin)
+
+    &__link
+        font: large Montserrat
+        color: var(--dark)
+        text-decoration: none
+
+        padding: var(--padding)
+        margin: var(--margin)
+
+        display: block
+        
     &__btn
         font: 500 large Montserrat
         font-variant: all-small-caps

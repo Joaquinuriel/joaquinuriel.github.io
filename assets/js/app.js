@@ -11,14 +11,20 @@ headerBtn.addEventListener("click", () => {
     menu.classList.toggle("menu--hidden");
 });
 let flexBtn = document.querySelector(".flex button");
-flexBtn.addEventListener("click", () => window.alert("alert"));
+flexBtn.addEventListener("click", () => say("hello there"));
 let clearCache = document.getElementById("clear-cache");
 clearCache.addEventListener("click", () => localStorage.clear());
+let toasted = false;
 let toast = document.getElementById("toast");
 let para = toast.querySelector("p");
 const say = (message) => {
     para.innerHTML = message;
     toast.style.top = "60px";
+    toasted = true;
+    setTimeout(() => {
+        toast.style.top = null;
+        toasted = false;
+    }, 5000);
 };
-toast.addEventListener("click", () => toast.style = null);
-setTimeout(() => say("hello there"), 250);
+toast.addEventListener("click", () => toast.style.top = null);
+setTimeout(() => say("hello there"), 1000);
