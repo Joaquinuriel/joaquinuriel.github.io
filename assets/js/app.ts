@@ -38,5 +38,3 @@ const say = (message: string) => {
 }
 toast.addEventListener("click", () => toast.style.top = null)
 // window.addEventListener("click", () => toasted === true && (toast.style.top = null))
-
-setTimeout(() => say("hello there"), 1000)
