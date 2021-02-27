@@ -20,11 +20,6 @@ const say = (message) => {
 };
 let flexBtn = document.querySelector(".flex button");
 flexBtn.addEventListener("click", () => say("hello there"));
-let updateIcons = document.getElementById("clear-cache");
-updateIcons.addEventListener("click", () => {
-    localStorage.clear();
-    say("Iconos actualizados");
-});
 toast.addEventListener("click", () => {
     toast.style.top = null;
 });

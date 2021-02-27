@@ -30,13 +30,6 @@ flexBtn.addEventListener("click", () => say("hello there"))
 
 // document.createElement("")
 
-let updateIcons = document.getElementById("clear-cache")
-updateIcons.addEventListener("click", () => {
-    localStorage.clear()
-    say("Iconos actualizados")
-})
-
-
 toast.addEventListener("click", () => {
     toast.style.top = null
 })
