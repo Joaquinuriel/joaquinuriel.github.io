@@ -17,7 +17,6 @@ let para = toast.querySelector("p");
 const say = (message) => {
     para.innerHTML = message;
     toast.style.top = "60px";
-    body.style.backgroundColor = "#aaa";
 };
 let flexBtn = document.querySelector(".flex button");
 flexBtn.addEventListener("click", () => say("hello there"));
@@ -28,5 +27,4 @@ updateIcons.addEventListener("click", () => {
 });
 toast.addEventListener("click", () => {
     toast.style.top = null;
-    body.style.backgroundColor = null;
 });

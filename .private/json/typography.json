@@ -10,12 +10,12 @@
         "weight": 700
     },
     "h3": {
-        "purpose": "content title",
-        "size": "32px",
+        "purpose": "flex title",
+        "size": "24px",
         "weight": 700
     },
     "h4": {
-        "purpose": "generic title",
+        "purpose": "block title",
         "size": "24px",
         "weight": 700
     },
