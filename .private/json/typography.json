@@ -30,7 +30,11 @@
         "weight": 700
     },
     "text": {
-        "size": "18px",
-        "weight": 400
+        "size": "19.2px",
+        "weight": 500
+    },
+    "link": {
+        "size": "19.2px",
+        "weight": 500
     }
 }

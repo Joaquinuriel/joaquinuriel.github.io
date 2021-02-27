@@ -6,11 +6,14 @@ icons.forEach(async (icon) => icon.outerHTML = await getIcon(icon.innerHTML));
 let header = document.querySelector("header");
 let menu = document.getElementById("menu");
 let headerBtn = header.querySelector("button");
-headerBtn.addEventListener("click", () => {
+let links = menu.querySelectorAll("a");
+const toggleMenu = () => {
     document.body.classList.toggle("locked");
     menu.classList.toggle("menu");
     menu.classList.toggle("menu--hidden");
-});
+};
+headerBtn.addEventListener("click", () => toggleMenu());
+links.forEach(link => link.addEventListener("click", () => toggleMenu()));
 let body = document.body;
 let toast = document.getElementById("toast");
 let para = toast.querySelector("p");
