@@ -9,27 +9,15 @@
     padding-top: 60px
     box-sizing: border-box
 
-    // display: flex
-    // flex-direction: column
-
     background: white
 
     overflow: auto
     transition: 250ms
 
-    @media (orientation: landscape)
-        width: 240px
-
-        background: white
-
     &--hidden
         @extend .menu
         visibility: hidden
         opacity: 0
-
-        @media (orientation: landscape)
-            visibility: visible
-            opacity: 1
 
     &__text
         font: bold larger Montserrat
