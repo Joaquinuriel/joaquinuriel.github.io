@@ -1,0 +1,23 @@
+.hover
+    &:hover
+        color: var(--viridian)
+        transition: 250ms
+
+        &::after 
+            width: 100%
+
+    &::after 
+        content: ""
+
+        position: absolute
+        top: 1.1em
+        left: 0px
+        z-index: -1
+
+        width: 0px
+        height: 0.1em
+        border-radius: 0.05em
+
+        background: var(--viridian)
+
+        transition: 250ms

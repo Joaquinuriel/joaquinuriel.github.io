@@ -1,6 +1,7 @@
 @import fonts 
 @import colors
 
+@import header
 @import blocks
 
 html
@@ -8,16 +9,7 @@ html
 
 body
     margin: 0
-
-.header
-    contain: content
-    margin-bottom: 30px
-
-    background: var(--viridian)
-    box-shadow: var(--shadow) var(--viridian)
-
-    &__title
-        font: bold 24px Montserrat
-        color: white 
-
-        margin: 30px
+    
+    display: flex
+    flex-direction: column
+    align-items: center 

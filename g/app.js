@@ -19,7 +19,7 @@ fetch("/g/jason.json")
 
 			block.classList.add("block");
 			img.classList.add("block__img");
-			title.classList.add("block__title");
+			title.classList.add("block__title--hover");
 			subtitle.classList.add("block__subtitle");
 			text.classList.add("block__text");
 

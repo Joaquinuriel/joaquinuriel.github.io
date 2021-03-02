@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Joaquinuriel/joaquinuriel.github.io/issues"
   },
-  "homepage": "https://joaquinuriel.github.io"
+  "homepage": "https://joaquinuriel.github.io",
+  "dependencies": {
+    "airtable": "^0.10.1"
+  }
 }
