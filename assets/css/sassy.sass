@@ -7,14 +7,20 @@
 
 @import fonts
 @import colors
-@import modifiers
 
 body
     margin: 0px
     scroll-behavior: smooth
 
+    @media (orientation: landscape)
+        margin-left: 240px
+        background: var(--dark)
+
 body.locked 
     overflow: hidden
+
+    @media (orientation: landscape)
+        overflow: auto
 
 ::selection
     color: white

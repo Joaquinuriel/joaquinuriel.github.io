@@ -1,6 +1,13 @@
 .block
     display: block
 
+    @media (orientation: landscape)
+        contain: content
+        border-radius: 30px 0px 30px 30px
+        margin: 30px
+
+        background: white
+
     &--main
         @extend .block
 
@@ -10,6 +17,9 @@
 
         padding: var(--padding)
         margin: 1em 0em
+
+        @media (orientation: landscape)
+            margin: var(--margin)
 
     &__text
         font: large Montserrat

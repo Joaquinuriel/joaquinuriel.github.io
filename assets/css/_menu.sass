@@ -6,8 +6,8 @@
 
     width: 100%
     height: 100%
-    box-sizing: border-box
     padding-top: 60px
+    box-sizing: border-box
 
     // display: flex
     // flex-direction: column
@@ -17,10 +17,19 @@
     overflow: auto
     transition: 250ms
 
+    @media (orientation: landscape)
+        width: 240px
+
+        background: white
+
     &--hidden
         @extend .menu
         visibility: hidden
         opacity: 0
+
+        @media (orientation: landscape)
+            visibility: visible
+            opacity: 1
 
     &__text
         font: bold larger Montserrat
@@ -41,6 +50,8 @@
 
         display: block
 
+        transition: color 250ms
+
         &:hover
             color: royalblue
 
@@ -56,7 +67,7 @@
             left: 0px
 
             width: 100%
-            height: 0.15em
+            height: 0.10em
             border-radius: 0.15em
 
             background: royalblue
