@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#fff"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="google-sign-in-client_id" content="236766090256-kcljmn9smjdcar4nvfir2d4alfpu1u2h.apps.googleusercontent.com">
     <title>Joaa</title>
     <link rel="stylesheet" href="/assets/css/sassy.min.css">
     <link rel="manifest" href="/manifest.json">
@@ -19,6 +20,7 @@
     <!-- <link rel="preload" as="font" href="/assets/fonts/Montserrat-Black.ttf"> -->
     <!-- <link rel="preload" as="font" href="/assets/fonts/Montserrat-Medium.ttf"> -->
     <script defer src="/assets/js/app.js"></script>
+    <script defer src="https://apis.google.com/js/platform.js"></script>
 </head>
 <body>
 
@@ -39,6 +41,7 @@
         <p class="menu__text">Nav</p>
         <a href="/" class="menu__link">Home</a>
         <a href="/c" class="menu__link">Cuenta</a>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
 
     <div class="toast" id="toast"><p class="toast__text"></p></div>
