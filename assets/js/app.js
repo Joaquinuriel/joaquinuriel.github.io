@@ -1,5 +1,5 @@
 const getIcon = async (icon) => localStorage.getItem(icon) || await fetch(`/assets/ionicons/${icon}.svg`)
-    .then(res => res.text().then(txt => (localStorage.setItem(icon, txt), txt)));
+    .then(res => res.text()).then(txt => (localStorage.setItem(icon, txt), txt));
 
 let icons = document.querySelectorAll('s');
 icons.forEach(async (icon) => icon.outerHTML = await getIcon(icon.innerHTML));

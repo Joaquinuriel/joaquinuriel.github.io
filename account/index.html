@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="236766090256-kcljmn9smjdcar4nvfir2d4alfpu1u2h.apps.googleusercontent.com">
     <title>Cuenta</title>
     <link rel="stylesheet" href="/assets/css/sassy.min.css">
+    <script defer src="https://apis.google.com/js/platform.js"></script>  
+    <script defer src="/assets/js/account.js"></script>
   </head>
   <body>
     <header class="header" id="header">
@@ -35,7 +38,7 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
     </div>
   </body>
 </html>
