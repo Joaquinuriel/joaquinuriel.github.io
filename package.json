@@ -1,18 +1,17 @@
 {
   "name": "joaquinuriel.github.io",
-  "description": "",
+  "description": "Personal Web App",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "python -m http.server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "python -m http.server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Joaquinuriel/joaquinuriel.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joaquin Uriel Martinez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Joaquinuriel/joaquinuriel.github.io/issues"
