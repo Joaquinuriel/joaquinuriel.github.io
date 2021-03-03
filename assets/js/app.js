@@ -32,9 +32,5 @@ flexBtn.addEventListener("click", () => say("hello there"));
 toast.addEventListener("click", () => toast.style.top = null);
 
 
-import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 
-const octokit = new Octokit();
 
-octokit.request('GET /repos/Joaquinuriel/joaquinuriel.github.io/contents/README.md', {})
-    .then(({ data }) => console.log(atob(data.content)))
