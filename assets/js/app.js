@@ -31,5 +31,13 @@ let flexBtn = document.querySelector(".flex button");
 flexBtn.addEventListener("click", () => say("hello there"));
 toast.addEventListener("click", () => toast.style.top = null);
 
+const load = src => {
+    let script = document.createElement("script");
+	script.defer = true;
+	script.src = `/assets/js/${src}.js`
+	document.head.appendChild(script);
+}
 
-
+load("fire")
+load("base")
+load("auth")
