@@ -7,7 +7,10 @@
 
     transform: translateX(-50%)
 
-    height: 60px
+
+    width: fit-content
+    max-width: calc( 100% - 120px )
+    min-height: 60px
     padding: var(--padding)
     border-radius: 30px
     margin: var(--margin)
@@ -17,9 +20,6 @@
     justify-content: center
 
     background: var(--white)
-    // background: rgba(0, 0, 0, 0.5)
-    // background: rgba(65, 105, 225, 0.5)
-    // background: var(--red)
     backdrop-filter: blur(20px)
     -webkit-backdrop-filter: blur(20px)
 
@@ -27,7 +27,8 @@
 
     &__text
         font: 500 large Montserrat
-        // color: white
+        line-height: 2
+        text-align: center
         user-select: none
 
         padding: 0px

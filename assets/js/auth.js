@@ -3,6 +3,8 @@ const auth = () => {
 	auth.onAuthStateChanged((user) => {
 		console.log(user);
 
+		user && say("Hola " + user.displayName);
+
 		let googleBtn = document.getElementById("google-btn");
 		googleBtn &&
 			googleBtn.addEventListener("click", () => {
