@@ -1,6 +1,4 @@
-navigator.serviceWorker.register("/sw.js")
-    .then(registration => console.log(registration))
-    .catch(error => console.log(error))
+navigator.serviceWorker.register("/sw.js");
 
 const getIcon = async (icon) => localStorage.getItem(icon) || await fetch(`/assets/ionicons/${icon}.svg`)
     .then(res => res.text()).then(txt => (localStorage.setItem(icon, txt), txt));
