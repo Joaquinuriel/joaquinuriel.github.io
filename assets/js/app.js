@@ -35,32 +35,31 @@ let flexBtn = document.querySelector(".flex button");
 flexBtn.addEventListener("click", () => say("hello there"));
 toast.addEventListener("click", () => toast.style.top = null);
 
-const load = async (src) => {
-    let script = document.createElement("script");
+const load = (src) => {
+	let script = document.createElement("script");
 	script.defer = true;
-    script.src = `/assets/js/${src}.js`
+	script.src = `/assets/js/${src}.js`;
 	document.head.appendChild(script);
-}
+};
 
 load("fire")
 load("base")
 load("auth")
-
     
-const navigate = (page) => {
-    document.body.classList.add("loading")
-	fetch(`/assets/${page}.html`)
-		.then((file) => file.text())
-		.then((text) => {
-			document.body.style.transition = "250ms";
-            document.body.style.opacity = 0;
-            setTimeout(() => {
-                document.body.outerHTML = text;
-                document.body.style.opacity = 1;
-                document.body.classList.remove("loading")
-            }, 250)
-		});
-};
+// const navigate = (page) => {
+//     document.body.classList.add("loading")
+// 	fetch(`/assets/${page}.html`)
+// 		.then((file) => file.text())
+// 		.then((text) => {
+// 			document.body.style.transition = "250ms";
+//             document.body.style.opacity = 0;
+//             setTimeout(() => {
+//                 document.body.outerHTML = text;
+//                 document.body.style.opacity = 1;
+//                 document.body.classList.remove("loading")
+//             }, 250)
+// 		});
+// };
 
 // class Joaa extends HTMLElement {
 // 	async render(page) {
