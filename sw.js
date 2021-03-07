@@ -2,7 +2,7 @@ self.addEventListener("install", () => self.skipWaiting());
 
 self.addEventListener("fetch", (event) => {
 	if (event.request.method === "GET")
-		if (/api/.test(event.request.url)) event.respondWith(fetch(event.request));
+		if (/api/.test(event.request.url)) event.respondWith(fetch(event.request).catch());
 		else if (self.navigator.connection.effectiveType === "4g")
 			event.respondWith(
 				caches.open("stale").then(async (cache) => {

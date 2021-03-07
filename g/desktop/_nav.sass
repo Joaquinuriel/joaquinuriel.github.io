@@ -1,0 +1,61 @@
+.nav
+    position: fixed
+    top: 0px
+    left: 0px
+    bottom: 0px
+    z-index: 1
+
+    width: 90px
+
+    display: flex
+    flex-direction: column
+
+    background: white
+    box-shadow: var(--shadow) var(--light)
+
+    overflow: hidden
+    transition: width var(--fast)
+
+    &:hover 
+        width: 240px
+
+    &:hover &__text
+        visibility: visible
+        opacity: 1
+
+    &__link
+        color: inherit
+        text-decoration: none
+
+        width: fit-content
+
+        display: flex
+
+        transition: var(--fast)
+
+        &:hover
+            color: var(--blue)
+            fill: var(--blue)
+
+        &--first
+            @extend .nav__link
+            margin-bottom: auto
+
+        &--last
+            @extend .nav__link
+            margin-top: auto
+
+    &__text
+        font: 500 large Montserrat
+
+        margin: auto auto auto 15px
+
+        visibility: hidden
+        opacity: 0
+
+        
+
+    svg 
+        width: 36px
+        height: 36px
+        margin: (90 - 36) / 2 * 1px

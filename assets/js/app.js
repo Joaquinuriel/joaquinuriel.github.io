@@ -22,17 +22,18 @@ headerBtn.addEventListener("click", () => toggleMenu());
 links.forEach(link => link.addEventListener("click", () => toggleMenu()));
 
 let body = document.body;
-let toast = document.getElementById("toast");
-let para = toast.querySelector("p");
+
 const say = (message) => {
-    para.innerHTML = message;
-    toast.style.bottom = "0px";
+    let toast = document.getElementById("toast");
+    let text = toast.querySelector("p");
+    text.innerHTML = message;
+    toast.style.top = "60px";
 };
 
 let flexBtn = document.querySelector(".flex button");
 
 flexBtn.addEventListener("click", () => say("hello there"));
-toast.addEventListener("click", () => toast.style.bottom = null);
+toast.addEventListener("click", () => toast.style.top = null);
 
 const load = (src) => {
 	let script = document.createElement("script");
