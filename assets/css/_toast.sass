@@ -1,32 +1,25 @@
 .toast
     position: fixed
-    top: -120px
-    // bottom: -120px
-    left: 50%
+    bottom: -120px
+    left: 0px
     z-index: 2
 
-    transform: translateX(-50%)
-
-
-    width: fit-content
-    max-width: calc( 100% - 120px )
-    min-height: 60px
-    padding: var(--padding)
+    width: -webkit-fill-available
+    padding: 12px 30px
     border-radius: 30px
-    margin: var(--margin)
+    margin: 30px
 
     display: flex
     align-items: center
     justify-content: center
 
-    background: var(--white)
-    backdrop-filter: blur(20px)
-    -webkit-backdrop-filter: blur(20px)
+    background: var(--blue)
 
-    transition: top 250ms
+    transition: bottom 250ms
 
     &__text
         font: 500 large Montserrat
+        color: white
         line-height: 2
         text-align: center
         user-select: none

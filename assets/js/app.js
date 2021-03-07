@@ -1,4 +1,5 @@
-navigator.serviceWorker.register("/sw.js");
+navigator.serviceWorker.register("/sw.js")
+navigator.connection.effectiveType === "4g" || console.log("slow connection") 
 
 const getIcon = async (icon) => localStorage.getItem(icon) || await fetch(`/assets/ionicons/${icon}.svg`)
     .then(res => res.text()).then(txt => (localStorage.setItem(icon, txt), txt));
@@ -25,13 +26,13 @@ let toast = document.getElementById("toast");
 let para = toast.querySelector("p");
 const say = (message) => {
     para.innerHTML = message;
-    toast.style.top = "60px";
+    toast.style.bottom = "0px";
 };
 
 let flexBtn = document.querySelector(".flex button");
 
 flexBtn.addEventListener("click", () => say("hello there"));
-toast.addEventListener("click", () => toast.style.top = null);
+toast.addEventListener("click", () => toast.style.bottom = null);
 
 const load = (src) => {
 	let script = document.createElement("script");
@@ -41,8 +42,6 @@ const load = (src) => {
 };
 
 load("fire")
-load("base")
-load("auth")
     
 // const navigate = (page) => {
 //     document.body.classList.add("loading")

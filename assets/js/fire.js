@@ -6,14 +6,17 @@ const fire = async (src, callback) => {
 	document.head.appendChild(script);
 };
 
-const init = () => firebase.initializeApp({
-	apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
-	authDomain: "joaquinuriel.firebaseapp.com",
-	databaseURL: "https://joaquinuriel-default-rtdb.firebaseio.com",
-	projectId: "joaquinuriel",
-	storageBucket: "joaquinuriel.appspot.com",
-	messagingSenderId: "236766090256",
-	appId: "1:236766090256:web:47ce276a0e7b2c01692695"
-});
+const init = async () =>
+	firebase.initializeApp({
+		apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
+		authDomain: "joaquinuriel.firebaseapp.com",
+		databaseURL: "https://joaquinuriel-default-rtdb.firebaseio.com",
+		projectId: "joaquinuriel",
+		storageBucket: "joaquinuriel.appspot.com",
+		messagingSenderId: "236766090256",
+		appId: "1:236766090256:web:47ce276a0e7b2c01692695",
+	});
 
 fire("app", init);
+load("base");
+load("auth");

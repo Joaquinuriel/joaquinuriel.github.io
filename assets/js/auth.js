@@ -1,9 +1,13 @@
-const auth = () => {
+const auth = async () => {
 	let auth = firebase.auth();
 	auth.onAuthStateChanged((user) => {
-		console.log(user);
-
 		user && say("Hola " + user.displayName);
+		user &&
+			console.log(user.displayName, {
+				email: user.email,
+				phone: user.phoneNumber,
+				id: user.uid,
+			});
 
 		let googleBtn = document.getElementById("google-btn");
 		googleBtn &&
