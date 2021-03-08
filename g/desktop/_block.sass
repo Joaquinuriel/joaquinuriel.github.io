@@ -1,11 +1,21 @@
 .block
-    margin: 30px
-        left: 60px
+    margin: 30px 30px 30px 120px
+    transition: margin var(--fast) ease-out
 
-    transition: margin var(--fast)
-    
+    &--main 
+        @extend .block
+        margin: 30px
+
     &__title
         font: bold 24px Montserrat
+        margin: 0px
+
+        &--main
+            font: 900 60px Montserrat
+            margin: 0px
+
+    &__subtitle--main
+        font: bold 36px Montserrat
         margin: 0px
 
     &__text

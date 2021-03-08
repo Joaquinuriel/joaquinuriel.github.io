@@ -33,3 +33,9 @@ const unsay = () => {
 }
 toast.addEventListener("click", unsay)
 setTimeout(() => say("hello!"), 500)
+
+const ask = (question) => {
+    toast.textContent = question
+    toast.classList.add("toast")
+    toast.classList.remove("toast--hidden")
+}
