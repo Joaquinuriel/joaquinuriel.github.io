@@ -57,6 +57,11 @@
             padding: 0px
             margin: 0px
 
+        &--close:hover 
+            transform: rotate(45deg)
+        &--close:hover svg
+            transform: rotate(-45deg)
+
     &__text 
         font: 500 large Montserrat
 
@@ -64,3 +69,5 @@
         width: 30px
         height: 30px
         margin: 15px
+
+        transition: transform var(--fast)

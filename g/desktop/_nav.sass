@@ -22,12 +22,13 @@
     &:hover &__text
         visibility: visible
         opacity: 1
+    
 
     &__link
         color: inherit
         text-decoration: none
 
-        width: fit-content
+        width: 240px
 
         display: flex
 
@@ -36,6 +37,10 @@
         &:hover
             color: var(--blue)
             fill: var(--blue)
+
+        &:hover .nav__text::after
+            opacity: 1
+            transform: rotateY(45deg)
 
         &--first
             @extend .nav__link
@@ -48,12 +53,28 @@
     &__text
         font: 500 large Montserrat
 
+        position: relative
+
         margin: auto auto auto 15px
 
         visibility: hidden
         opacity: 0
 
-        
+        &::after
+            content: ""
+
+            position: absolute
+            top: 1.15em
+            left: 0px
+
+            width: 100%
+            height: 0.1em
+            background: var(--blue)
+
+            opacity: 0
+
+            transform: rotateY(0deg)
+            transition: var(--fast)
 
     svg 
         width: 36px
