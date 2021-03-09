@@ -1,0 +1,24 @@
+.toast 
+    position: fixed
+    left: 60px
+    right: 60px
+    top: 90px
+
+    height: 60px
+    border-radius: 30px
+
+    display: flex
+    align-items: center 
+    justify-content: center
+
+    background: var(--blue)
+
+    transition: top var(--fast)
+
+    &--hidden
+        @extend .toast
+        top: -120px
+    
+    &__text 
+        font: 500 large Montserrat
+        color: white

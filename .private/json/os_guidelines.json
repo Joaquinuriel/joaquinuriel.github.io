@@ -1,35 +1,26 @@
 {
+    "mobile": {
+        "design": {
+            "main-color": "blue",
+            "shadows": false,
+            "blur": true
+        },
+        "components": {
+            "nav": "in menu",
+            "menu": "modal"
+        }
+    },
     "desktop": {
+        "design": {
+            "main-color": "white",
+            "shadows": true,
+            "blur": false
+        },
         "components": {
             "nav": "sidebar",
             "menu": "pop up"
-        },
-        "design": {
-            "main-color": "black",
-            "shadows": true,
-            "blur": false
         }
-    },
-    "android": {
-        "components": {
-            "nav": "inside menu",
-            "menu": "modal"
-        },
-        "design": {
-            "main-color": "blue",
-            "shadows": true,
-            "blur": false
-        }
-    },
-    "ios": {
-        "components": {
-            "nav": "fixed bottom",
-            "menu": "own page"
-        },
-        "design": {
-            "main-color": "white",
-            "shadows": false,
-            "blur": 20
-        }
+        
     }
+    
 }

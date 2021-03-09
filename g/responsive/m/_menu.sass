@@ -1,0 +1,62 @@
+.menu
+    position: fixed
+    top: 60px
+    bottom: 0px
+    left: 0px
+    right: 0px
+
+    background: var(--white)
+    backdrop-filter: blur(20px) saturate(2)
+    -webkit-backdrop-filter: blur(20px) saturate(2)
+
+    transition: var(--fast)
+
+    &--hidden
+        @extend .menu
+        left: -100% 
+        right: 100%
+
+    &__header
+        height: 60px
+        padding: 0px 30px
+
+        display: flex
+
+    &__title 
+        font: bold 24px Montserrat
+        margin: auto 0px
+
+    &__btn
+        width: calc( 100% - 60px )
+        height: 60px
+        margin: 30px
+        padding: 0px
+        border-radius: 1em
+
+        display: flex
+        
+        background: var(--blue)
+        border: none
+        outline: none
+
+        &--close 
+            margin: 0px
+            padding: 0px
+
+            background: none
+            border: none
+            outline: none
+
+    &__text
+        font: 500 large Montserrat
+        color: white
+        margin: auto 0px
+
+    svg
+        color: white 
+        fill: white 
+
+        width: 36px
+        height: 36px
+        margin: 12px
+

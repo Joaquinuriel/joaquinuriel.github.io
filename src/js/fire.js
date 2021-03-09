@@ -1,6 +1,5 @@
 const fire = async (src, callback) => {
 	let script = document.createElement("script");
-	script.defer = true;
 	script.src = `https://www.gstatic.com/firebasejs/8.2.7/firebase-${src}.js`;
 	script.onload = callback;
 	document.head.appendChild(script);

@@ -1,0 +1,48 @@
+.nav 
+    position: fixed 
+    top: 120px
+    bottom: 0px
+    left: 0px
+    right: 0px
+
+    background: var(--white)
+    backdrop-filter: blur(20px) saturate(2)
+    -webkit-backdrop-filter: blur(20px) saturate(2)
+
+    visibility: hidden 
+    opacity: 0
+
+    transition: var(--fast)
+
+    &--visible
+        @extend .nav
+        top: 60px
+        visibility: visible 
+        opacity: 1
+
+    &__link
+        text-decoration: none 
+
+        margin: 30px
+        gap: 15px
+
+        display: flex
+        align-items: center
+
+        &--first 
+            display: none 
+
+        &--last 
+            @extend .nav__link
+
+    &__text
+        font: 500 large Montserrat
+        color: var(--blue)
+        margin: 0px
+
+    svg 
+        color: var(--blue)
+        fill: var(--blue)
+
+        width: 36px 
+        height: 36px
