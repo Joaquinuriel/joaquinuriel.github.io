@@ -1,0 +1,39 @@
+@import fonts
+
+body 
+    margin: 0
+    
+.wrapper
+    position: absolute
+    top: 120px
+    bottom: 120px
+    left: 120px
+    right: 120px
+
+    display: flex
+
+    &__column
+        display: flex
+        flex-direction: column
+        flex: 1 
+
+    &__box
+        // typography
+        font: 500 large Montserrat
+        text-align: center
+        user-select: none
+        // box model
+        flex: 1
+        // flexbox 
+        display: flex 
+        align-items: center 
+        justify-content: center
+        // styles
+        border: solid 1px #555
+
+        &--bold
+            @extend .wrapper__box
+            font: 700 large Montserrat   
+        
+
+        

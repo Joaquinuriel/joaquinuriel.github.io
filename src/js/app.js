@@ -26,8 +26,6 @@ const toggleMenu = () => {
 	menu.classList.toggle("menu--hidden");
 };
 
-btn.addEventListener("click", toggleMenu);
-
 const say = (message) => {
 	text.innerHTML = message;
 	toast.style.top = "60px";
