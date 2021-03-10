@@ -1,3 +1,7 @@
+---
+title: index
+---
+
 # Title
 Lorem ipsum dolor sit amet
 
