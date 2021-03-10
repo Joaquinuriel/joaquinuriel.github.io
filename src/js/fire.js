@@ -16,11 +16,11 @@ const init = () =>
 		appId: "1:236766090256:web:47ce276a0e7b2c01692695",
 	});
 
-const analitycs = () => firebase.analytics()
+const analytics = () => firebase.analytics()
 const performance = () => firebase.performance()
 
 fire("app", init)
 load("base");
 load("auth");
-fire("analitycs", analitycs);
+fire("analytics", analytics);
 fire("performance", performance);
