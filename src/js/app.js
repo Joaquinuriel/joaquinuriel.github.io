@@ -44,7 +44,6 @@ if (window.matchMedia("(orientation: portrait)").matches) {
 } else load("desktop");
 
 load("fire")
-	.then(load("base"))
-	.then(load("auth"))
+
 	
 

@@ -5,7 +5,7 @@ const fire = async (src, callback) => {
 	document.head.appendChild(script);
 };
 
-const init = async () =>
+const init = () =>
 	firebase.initializeApp({
 		apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
 		authDomain: "joaquinuriel.firebaseapp.com",
@@ -16,7 +16,11 @@ const init = async () =>
 		appId: "1:236766090256:web:47ce276a0e7b2c01692695",
 	});
 
-fire("app", init);
-fire("analitycs", firebase.analytics())
-fire("performance", firebase.performance())
+const analitycs = () => firebase.analytics()
+const performance = () => firebase.performance()
 
+fire("app", init)
+load("base");
+load("auth");
+fire("analitycs", analitycs);
+fire("performance", performance);
