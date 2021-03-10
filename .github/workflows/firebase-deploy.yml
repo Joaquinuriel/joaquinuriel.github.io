@@ -7,9 +7,9 @@ jobs:
   build_and_preview:
     runs-on: ubuntu-latest
     steps:
-      - run: firebase deploy --only hosting
       - uses: actions/checkout@v2
       - uses: FirebaseExtended/action-hosting-deploy@v0
+      - run: firebase deploy --only hosting
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JOAQUINURIEL }}'
