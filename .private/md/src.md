@@ -1,7 +1,7 @@
 - src/
 	- css/
 		- desktop/  
-			-	style.sass 
+			-	[style.sass](/src/css/desktop/style.sass) 
 		- mobile/
 			- style.sass
 	-	js/
