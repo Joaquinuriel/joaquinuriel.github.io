@@ -1,0 +1,64 @@
+.menu
+    position: fixed
+    top: 60px
+    left: 150px
+    right: 60px
+
+    padding: 30px
+    border-radius: 30px
+
+    background: white
+    box-shadow: var(--shadow) var(--light)
+
+    transition: var(--fast)
+
+    &--hidden
+        @extend .menu
+        top: 120px
+        visibility: hidden
+        opacity: 0
+
+    &__header
+        display: flex 
+
+    &__title
+        font: bold 24px Montserrat
+        margin: auto
+
+    &__btn
+        display: flex
+        align-items: center
+
+        height: 60px
+        margin: 1em 0px
+        padding: 0px 30px
+        border-radius: 1em
+
+        background: none
+        box-shadow: 0px 15px 15px -15px var(--light)
+        border: none
+        outline: none 
+
+        cursor: pointer
+        transition: var(--fast)
+
+        &:hover 
+            background: var(--blue)
+
+        &:hover .menu__text, svg
+            color: white
+
+
+        &--box
+            @extend .menu__btn
+            margin: 0px
+
+    &__text
+        font: 500 large Montserrat
+
+    svg 
+        color: var(--dark)
+        fill: var(--dark)
+
+        width: 36px
+        height: 36px

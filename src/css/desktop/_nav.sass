@@ -7,20 +7,59 @@
 
     width: 90px
 
+    display: flex 
+    flex-direction: column
+
     background: white
     box-shadow: var(--shadow) var(--light)
 
     overflow: hidden
     transition: width var(--fast)
 
+    &:hover 
+        width: 240px
+
+    &:hover &__text
+        visibility: visible
+        opacity: 1
+
     &__link 
         text-decoration: none
 
+        width: 240px
+
+        display: flex
+        align-items: center
+
+        &:hover .nav__text, &:hover svg
+            color: var(--blue)
+            fill: var(--blue)
+
+        &--first
+            @extend .nav__link
+            margin-bottom: auto
+
+        &--last 
+            @extend .nav__link
+            margin-top: auto
+
     &__text 
         font: 500 large Montserrat 
+        color: var(--dark) 
+
         margin: 0px
 
+        visibility: hidden
+        opacity: 0
+
+        transition: var(--fast)
+
     svg 
+        color: var(--dark) 
+        fill: var(--dark) 
+
         width: 36px 
         height: 36px 
-        margin: 12px
+        margin: 27px
+
+        transition: var(--fast)

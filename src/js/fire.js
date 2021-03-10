@@ -17,5 +17,6 @@ const init = async () =>
 	});
 
 fire("app", init);
-load("base");
-load("auth");
+fire("analitycs", firebase.analytics())
+fire("performance", firebase.performance())
+

@@ -33,7 +33,7 @@ const say = (message) => {
 
 toast.addEventListener("click", () => (toast.style.top = null));
 
-const load = (src) => {
+const load = async (src) => {
 	let script = document.createElement("script");
 	script.src = `/src/js/${src}.js`;
 	document.head.appendChild(script);
@@ -43,6 +43,8 @@ if (window.matchMedia("(orientation: portrait)").matches) {
 	load("mobile");
 } else load("desktop");
 
-load("fire");
-
+load("fire")
+	.then(load("base"))
+	.then(load("auth"))
+	
 
