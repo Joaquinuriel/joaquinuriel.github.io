@@ -2,6 +2,14 @@
 
 - src/
     - css/ 
-        - [style.sass](/src/css/style.sass)
+        - desktop
+            - [style.sass](/src/css/desktop/style.sass)
+        - mobile 
+            - [style.sass](/src/css/mobile/style.sass)
     - js/ 
-        - [app.js](/src/js.app.js)   
+        - [app.js](/src/js/app.js)   
+    - fonts/
+        [Montserrat Regular](/src/fonts/Montserrat-Regular.woff2)
+        [Montserrat Medium](/src/fonts/Montserrat-Medium.woff2)
+        [Montserrat Bold](/src/fonts/Montserrat-Bold.woff2)
+        [Montserrat Black](/src/fonts/Montserrat-Black.woff2)
