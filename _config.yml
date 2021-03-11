@@ -1,20 +1,10 @@
 theme: minima
 
 minima:
-  skin: dark
+  skin: solarized
   social_links:
-    # twitter: joaquinuriel
     github: joaquinuriel
-  #   stackoverflow: "11111"
-  #   dribbble: jekyll
-  #   facebook: jekyll
-  #   flickr: jekyll
     instagram: joaquinuriel94
-  #   linkedin: jekyll
-  #   pinterest: jekyll
-  #   telegram: jekyll
-  #   microdotblog: jekyll
-  #   keybase: jekyll
 
 header_pages:
   - pages/index.md

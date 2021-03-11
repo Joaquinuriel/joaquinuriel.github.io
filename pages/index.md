@@ -1,5 +1,6 @@
 ---
 title: Index
+desciption: My GitHub generated page
 layout: home
 ---
 
@@ -10,5 +11,5 @@ layout: home
 ##### Fifth title
 ###### Sixth title
 
-[@Joaquinuriel](https://github.com/Joaquinuriel)
-[nav](./nav.html)
+
+
