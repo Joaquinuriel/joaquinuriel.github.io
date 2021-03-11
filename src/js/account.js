@@ -1,34 +1,37 @@
-const auth = () => {
-	firebase.auth().onAuthStateChanged((user) => {
-		// LOG USER
-		console.log(user);
-		let auth = firebase.auth();
+navigator.serviceWorker.register("/sw.js");
+navigator.connection.effectiveType === "4g" || console.log("slow connection");
 
-		let signIn = document.getElementById("sign-in");
-		signIn.addEventListener("click", () => {
-			let email = prompt("email");
-			let password = prompt("password");
-			auth.signInWithEmailAndPassword(email, password)
-				.then((user) => console.log(user))
-				.catch((error) => console.log(error.message));
-		});
+const getIcon = async (icon) =>
+	localStorage.getItem(icon) ||
+	(await fetch(`/src/ionicons/${icon}.svg`)
+		.then((res) => res.text())
+		.then((txt) => (localStorage.setItem(icon, txt), txt)));
 
-		let signUp = document.getElementById("sign-up");
-		signUp.addEventListener("click", () => {
-			let email = prompt("email");
-			let password = prompt("password");
-			auth.createUserWithEmailAndPassword(email, password)
-				.then((user) => console.log(user))
-				.catch((error) => console.log(error.message));
-		});
+let icons = document.querySelectorAll("s");
+icons.forEach(async (icon) => (icon.outerHTML = await getIcon(icon.innerHTML)));
 
-		let googleBtn = document.getElementById("google-btn");
-		googleBtn.addEventListener("click", () => {
-			auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-				.then((user) => console.log(user))
-				.catch((error) => console.log(error.message));
-		});
-	});
+const load = async (src) => {
+	let script = document.createElement("script");
+	script.src = `/src/js/${src}.js`;
+	document.head.appendChild(script);
 };
 
-fire("auth", auth);
+load("fire")
+
+let body = document.body;
+let header = document.querySelector("header");
+let nav = document.querySelector("nav");
+let toast = document.getElementById("toast");
+
+let text = toast.querySelector("p");
+let link = nav.querySelector("a")
+let btn = header.querySelector("button");
+
+const say = (message) => {
+	text.innerHTML = message;
+	toast.classList = "toast"
+};
+
+const unsay = () => toast.classList = "toast--hidden"
+
+toast.addEventListener("click", () => (toast.style.top = null));

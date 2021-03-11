@@ -1,5 +1,5 @@
-let open = nav.querySelector("a");
-let close = menu.querySelector("button");
+// let open = nav.querySelector("a");
+// let close = menu.querySelector("button");
 
-open.addEventListener("click", toggleMenu);
-close.addEventListener("click", toggleMenu);
+// open.addEventListener("click", toggleMenu);
+// close.addEventListener("click", toggleMenu);

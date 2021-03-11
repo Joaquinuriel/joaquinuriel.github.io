@@ -2,34 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-signin-client_id" content="236766090256-kcljmn9smjdcar4nvfir2d4alfpu1u2h.apps.googleusercontent.com">
-    <title>Cuenta</title>
-    <link rel="stylesheet" href="/assets/css/sassy.min.css">
-    <script defer src="/assets/js/fire.js"></script>
-    <script defer src="/assets/js/account.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="My personal website" />
+		<meta name="theme-color" content="#fff" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<title>Joaa</title>
+		<link rel="stylesheet" href="/src/css/mobile/style.min.css" media="(orientation: portrait)" />
+		<link rel="stylesheet" href="/src/css/desktop/style.min.css" media="(orientation: landscape)" />
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="icon" sizes="16x16" href="/src/icons/16px.png" />
+		<link rel="icon" sizes="32x32" href="/src/icons/32px.png" />
+		<link rel="apple-touch-icon" href="/src/icons/120x120.png" sizes="120x120" />
+		<link rel="apple-touch-icon" href="/src/icons/180x180.png" sizes="180x180" />
+		<link rel="apple-touch-startup-image" href="/src/icons/512x512.png" sizes="512x512" />
+		<link rel="apple-touch-startup-image" href="/src/icons/1024x1024.png" sizes="1024x1024" />
+		<script defer src="/src/js/account.js"></script>
   </head>
   <body>
-    <header class="header" id="header">
-      <a href="/" class="header__title">Joaa</a>
-      <button class="header__btn">
-        <s>menu</s>
-      </button>
-    </header>
+    <header class="header">
+			<h1 class="header__title">Joaa</h1>
+			<button class="header__btn"><s>navigate</s></button>
+		</header>
 
-    <div class="menu--hidden" id="menu">
-      <p class="menu__text">Nav</p>
-      <a href="/" class="menu__link">Home</a>
-      <a href="/c" class="menu__link">Cuenta</a>
-      <p class="menu__text">Opciones</p>
-      <button class="menu__btn" id="clear-cache">Actualizar iconos</button>
-      <button class="menu__btn--golden">Golden Button</button>
-    </div>
+		<nav class="nav">
+			<a href="#" class="nav__link--first">
+				<s>menu</s>
+				<p class="nav__text">Menu</p>
+			</a>
+			<a href="/" class="nav__link">
+				<s>home</s>
+				<p class="nav__text">Home</p>
+			</a>
+			<a href="/g/" class="nav__link">
+				<s>library</s>
+				<p class="nav__text">Proyectos</p>
+			</a>
+			<a href="/c/" class="nav__link--last">
+				<s>person</s>
+				<p class="nav__text">Account</p>
+			</a>
+		</nav>
 
-    <div class="block--main">
+    <div class="toast--hidden" id="toast"><p class="toast__text"></p></div>
+
+    <div class="block">
       <h1 class="block__title">Hello World</h1>
-      <p class="block__text--larger">
+      <p class="block__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -38,8 +57,6 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <button class="block__btn" id="sign-in">Sign In</button>
-      <button class="block__btn" id="sign-up">Sign Up</button>
       <button class="block__btn" id="google-btn">Google</button>
     </div>
   </body>
