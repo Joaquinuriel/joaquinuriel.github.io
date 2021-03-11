@@ -1,3 +1,7 @@
+---
+title: calendar
+---
+
 |  | Lunes | Martes | Miercoles | Jueves | Viernes
 | :---: | --- | --- | --- | --- | --- |
 7:30 - 8:15 | Historia | Literatura | Filosofia | Proyecto | Arte
