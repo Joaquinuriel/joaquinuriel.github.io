@@ -1,3 +1,7 @@
+---
+title: Joaquinuriel
+---
+
 # Joaa
 ### My personal dashboard
 ##### idk what to write here
