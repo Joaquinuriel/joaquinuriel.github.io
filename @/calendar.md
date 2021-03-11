@@ -1,5 +1,5 @@
 ---
-title: calendar
+title: Calendar
 ---
 
 |  | Lunes | Martes | Miercoles | Jueves | Viernes
