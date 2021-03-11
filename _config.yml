@@ -10,6 +10,9 @@ description:
 
 theme: minima
 
+minima: 
+  skin: dark
+
 github_username:  joaquinuriel
 instagram_username: joaquinuriel94
 
