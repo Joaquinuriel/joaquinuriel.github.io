@@ -2,8 +2,8 @@ name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - firebase/**
 
 jobs:
   deploy_to_firebase_hosting:
