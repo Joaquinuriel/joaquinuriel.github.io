@@ -1,6 +1,6 @@
 ---
 title: Calendar
-layout: post
+layout: page
 ---
 
 |  | Lunes | Martes | Miercoles | Jueves | Viernes

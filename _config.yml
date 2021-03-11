@@ -1,1 +1,21 @@
 theme: minima
+minima:
+  skin: dark
+  # social_links:
+  #   twitter: jekyllrb
+  #   github: jekyll
+  #   stackoverflow: "11111"
+  #   dribbble: jekyll
+  #   facebook: jekyll
+  #   flickr: jekyll
+  #   instagram: jekyll
+  #   linkedin: jekyll
+  #   pinterest: jekyll
+  #   telegram: jekyll
+  #   microdotblog: jekyll
+  #   keybase: jekyll
+header_pages:
+  - index.md
+  - about.md
+  - calendar.md
+
