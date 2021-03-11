@@ -1,0 +1,103 @@
+html
+    // 50PX FORMAT
+    --margin: 25px
+    --light-blue: #74ACDF
+
+.nav
+    position: fixed
+    top: 0px
+    bottom: 0px
+    left: 0px
+    z-index: 1
+
+    width: 100px
+
+    background: royalblue
+
+    transition: 250ms
+
+    &:hover 
+        width: 250px
+    
+.main
+    position: fixed
+    top: 50px
+    bottom: 50px
+    left: 150px
+    right: 350px
+
+    border-radius: 25px
+
+    background: royalblue
+
+    h1
+        font: bold 36px Montserrat
+        color: white
+        margin: 25px
+
+    p
+        font: large Montserrat
+        color: white
+        margin: 25px
+
+    button 
+        font: 500 medium Montserrat
+
+        position: absolute
+        top: 0px
+        right: 0px
+
+        height: 50px
+        margin: 25px
+        padding: 0px 25px 
+        border-radius: 25px 
+
+        background: white 
+        border: none 
+        outline: none
+
+        cursor: pointer
+        user-select: none
+
+.side
+    position: fixed
+    top: 50px
+    bottom: 50px
+    right: 50px
+
+    width: 250px
+    border-radius: 25px 
+
+    background: royalblue
+
+    h2
+        font: bold 24px Montserrat
+        color: white
+
+        margin: 25px
+
+.hidden
+    visibility: hidden
+    opacity: 0 
+    transform: scale(0.75)
+
+@font-face 
+    font-family: Montserrat
+    font-weight: 900
+    font-display: swap 
+    src: url(/src/fonts/Montserrat-Black.woff2)
+@font-face 
+    font-family: Montserrat
+    font-weight: 700
+    font-display: swap
+    src: url(/src/fonts/Montserrat-Bold.woff2)
+@font-face 
+    font-family: Montserrat
+    font-weight: 500
+    font-display: swap
+    src: url(/src/fonts/Montserrat-Medium.woff2)
+@font-face 
+    font-family: Montserrat
+    font-weight: 400
+    font-display: swap
+    src: url(/src/fonts/Montserrat-Regular.woff2)

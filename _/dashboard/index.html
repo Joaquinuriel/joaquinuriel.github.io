@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sample Dashboard" />
+		<meta name="theme-color" content="#fff" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<title>Dashboard</title>
+		<link rel="stylesheet" href="/_/dashboard/style.min.css">
+		<link rel="manifest" href="/manifest.json" />
+		<link rel="icon" sizes="16x16" href="/src/icons/16px.png" />
+		<link rel="icon" sizes="32x32" href="/src/icons/32px.png" />
+		<link rel="apple-touch-icon" href="/src/icons/120x120.png" sizes="120x120" />
+		<link rel="apple-touch-icon" href="/src/icons/180x180.png" sizes="180x180" />
+		<link rel="apple-touch-startup-image" href="/src/icons/512x512.png" sizes="512x512" />
+		<link rel="apple-touch-startup-image" href="/src/icons/1024x1024.png" sizes="1024x1024" />
+		<script defer src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+		<script defer src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+		<script defer src="/_/dashboard/app.js"></script>
+</head>
+<body>
+	<nav class="nav"></nav>
+    <div class="main">
+		<h1>Title</h1>
+		<p>This section should change accordingly with the user state</p>
+		<button>Sign in</button>
+	</div>
+    <div class="side">
+		<h2>Mensajes</h2>
+		<div class="scrollbox"></div>
+	</div>
+	<button id="sign-out-btn"></button>
+</body>
+</html>

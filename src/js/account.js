@@ -16,7 +16,7 @@ const load = async (src) => {
 	document.head.appendChild(script);
 };
 
-load("fire")
+load("fire");
 
 let body = document.body;
 let header = document.querySelector("header");
@@ -24,21 +24,23 @@ let nav = document.querySelector("nav");
 let toast = document.getElementById("toast");
 
 let text = toast.querySelector("p");
-let link = nav.querySelector("a")
+let link = nav.querySelector("a");
 let btn = header.querySelector("button");
 
 const say = (message) => {
 	text.innerHTML = message;
-	toast.classList = "toast"
+	toast.classList = "toast";
 };
 
-const unsay = () => toast.classList = "toast--hidden"
+const unsay = () => (toast.classList = "toast--hidden");
 
 toast.addEventListener("click", () => (toast.style.top = null));
 
 const toggleBlock = (visible, hidden) => {
-	visible.style.visibility = "visible"
-	visible.style.opacity = "1"
-	hidden.style.visibility = "hidden"
-	hidden.style.opacity = "0"
-}
+	hidden.style.visibility = "hidden";
+	hidden.style.opacity = "0";
+	setTimeout(() => {
+		visible.style.visibility = "visible";
+		visible.style.opacity = "1";
+	}, 250);
+};
