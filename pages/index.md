@@ -15,4 +15,4 @@ variables:
 ##### Fifth title
 ###### Sixth title
 
-![image](/src/icons/512x512.png)
+![image](/src/icons/64x64.png)
