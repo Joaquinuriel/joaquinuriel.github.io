@@ -17,8 +17,7 @@ minima:
   #   keybase: jekyll
 
 header_pages:
-  - README.md
-  - /@/index.md
-  - /@/about.md
-  - /@/calendar.md
+  - pages/index.md
+  - pages/about.md
+  - pages/calendar.md
 
