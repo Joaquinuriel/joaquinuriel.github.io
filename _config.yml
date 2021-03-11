@@ -11,7 +11,7 @@ description:
 theme: minima
 
 minima:
-  skin: solarized
+  skin: dark
   social_links:
     github: joaquinuriel
     instagram: joaquinuriel94
