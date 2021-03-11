@@ -17,7 +17,7 @@ minima:
   #   keybase: jekyll
 
 header_pages:
-  - index.md
-  - about.md
-  - calendar.md
+  - /@/index.md
+  - /@/about.md
+  - /@/calendar.md
 
