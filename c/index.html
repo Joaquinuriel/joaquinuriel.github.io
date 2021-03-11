@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="My personal website" />
 		<meta name="theme-color" content="#fff" />
@@ -18,9 +18,9 @@
 		<link rel="apple-touch-startup-image" href="/src/icons/512x512.png" sizes="512x512" />
 		<link rel="apple-touch-startup-image" href="/src/icons/1024x1024.png" sizes="1024x1024" />
 		<script defer src="/src/js/account.js"></script>
-  </head>
-  <body>
-    <header class="header">
+	</head>
+	<body>
+		<header class="header">
 			<h1 class="header__title">Joaa</h1>
 			<button class="header__btn"><s>navigate</s></button>
 		</header>
@@ -34,7 +34,7 @@
 				<s>home</s>
 				<p class="nav__text">Home</p>
 			</a>
-			<a href="/g/" class="nav__link">
+			<a href="/_/" class="nav__link">
 				<s>library</s>
 				<p class="nav__text">Proyectos</p>
 			</a>
@@ -44,12 +44,16 @@
 			</a>
 		</nav>
 
-    <div class="toast--hidden" id="toast"><p class="toast__text"></p></div>
+		<div class="toast--hidden" id="toast"><p class="toast__text"></p></div>
 
-    <div class="block" id="signed-out">
-      <button class="block__btn" id="google-btn">Google <s>enter</s></button>
-    </div>
+		<div class="block--fixed" id="signed-out">
+			<button class="block__btn" id="google-btn">Google <s>enter</s></button>
+		</div>
 
-
-  </body>
+		<div class="block--fixed" id="signed-in">
+			<h4 class="block__title"></h4>
+			<p class="block__text"></p>
+			<button class="block__btn">Sign out</button>
+		</div>
+	</body>
 </html>

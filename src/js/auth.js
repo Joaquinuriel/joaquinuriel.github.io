@@ -1,16 +1,22 @@
 const auth = async () => {
 	let auth = firebase.auth();
+	let signedOut = document.getElementById("signed-out");
+	let signedIn = document.getElementById("signed-in");
 	auth.onAuthStateChanged((user) => {
 		if (user) {
+			toggleBlock(signedIn, signedOut)
 			say("Hola " + user.displayName);
-			createDashboard(auth, user.displayName, user.email).then((block) => {
-				let signedOut = document.getElementById("signed-out");
-				signedOut.hidden = true;
-				block.querySelector("button").addEventListener("click", () => auth.signOut());
-			});
+
+			let title = signedIn.querySelector("h4")
+			let text = signedIn.querySelector("p")
+			let btn = signedIn.querySelector("button")
+
+			title.textContent = user.displayName
+			text.textContent = user.email
+			btn.addEventListener("click", () => auth.signOut())
+
 		} else {
-			let block = document.getElementById("signed-in");
-			block.hidden = true;
+			toggleBlock(signedOut, signedIn)
 		}
 
 		let googleBtn = document.getElementById("google-btn");
@@ -25,5 +31,3 @@ const auth = async () => {
 };
 
 fire("auth", auth);
-
-const signOut = () => firebase.auth().signOut();

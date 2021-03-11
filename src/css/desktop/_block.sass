@@ -1,6 +1,15 @@
 .block
     max-width: 50%
     margin: 30px
+    
+    &--fixed
+        @extend .block
+        position: fixed
+        top: 60px
+        left: 150px
+        right: 60px
+
+        transition: var(--slow)
 
     &__title
         font: bold 24px Montserrat
