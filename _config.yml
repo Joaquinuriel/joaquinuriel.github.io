@@ -1,8 +1,7 @@
-title: joaa
+title: joaquinuriel.github.io
 
-author:
-  name: Joaquinuriel
-  email: joaquinuriel94@gmail.com
+author: Joaquinuriel
+email: joaquinuriel94@gmail.com
 
 description:
   Write an awesome description for your new site here. You can edit this
@@ -16,6 +15,9 @@ minima:
   social_links:
     github: joaquinuriel
     instagram: joaquinuriel94
+
+github_username:  joaquinuriel
+instagram_username: joaquinuriel94
 
 header_pages:
   - pages/index.md
