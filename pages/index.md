@@ -12,6 +12,8 @@ post: calendar.md
 ##### Fifth title
 ###### Sixth title
 
-{{ post }}
+{% for page in site.pages %}
+  <h3>{{ page[0] }}</h3>
+{% endfor %}
 
 ![image](/src/icons/64x64.png)
