@@ -10,13 +10,10 @@ description:
 
 theme: minima
 
-minima: 
-  skin: dark
-
 github_username:  joaquinuriel
 instagram_username: joaquinuriel94
 
 header_pages:
   - pages/index.md
-  - pages/about.md
   - pages/calendar.md
+  - pages/about.md
