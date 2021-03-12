@@ -1,6 +1,6 @@
 ---
 title: Index
-desciption: My GitHub generated page
+description: My GitHub generated page
 layout: home
 ---
 
@@ -10,3 +10,11 @@ layout: home
 #### I'm not running short of titles
 ##### Fifth title
 ###### Sixth title
+
+Lorem Ipsum dolor sit amet
+
+``` javascript
+const get = (file) => {
+    fetch(file)
+}
+```
