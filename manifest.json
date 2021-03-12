@@ -1,7 +1,7 @@
 {
 	"name": "Joaa",
 	"short_name": "Joaa",
-	"theme_color": "#fff",
+	"theme_color": "#4169e1",
 	"background_color": "#fff",
 	"display": "standalone",
 	"orientation": "portrait",
@@ -9,43 +9,25 @@
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "/src/icons/64x64.png",
+			"src": "/src/images/180x180.png",
 			"type": "image/png",
-			"sizes": "64x64",
+			"sizes": "180x180",
 			"purpose": "any maskable"
 		},
 		{
-			"src": "/src/icons/128x128.png",
-			"type": "image/png",
-			"sizes": "128x128",
-			"purpose": "any maskable"
-		},
-		{
-			"src": "/src/icons/144x144.png",
-			"type": "image/png",
-			"sizes": "144x144",
-			"purpose": "any maskable"
-		},
-		{
-			"src": "/src/icons/192x192.png",
+			"src": "/src/images/192x192.png",
 			"type": "image/png",
 			"sizes": "192x192",
 			"purpose": "any maskable"
 		},
 		{
-			"src": "/src/icons/256x256.png",
-			"type": "image/png",
-			"sizes": "256x256",
-			"purpose": "any maskable"
-		},
-		{
-			"src": "/src/icons/512x512.png",
+			"src": "/src/images/512x512.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "any maskable"
 		},
 		{
-			"src": "/src/icons/1024x1024.png",
+			"src": "/src/images/1024x1024.png",
 			"type": "image/png",
 			"sizes": "1024x1024",
 			"purpose": "any maskable"
@@ -56,11 +38,8 @@
 			"name": "Open Account",
 			"short_name": "Account",
 			"description": "View account settings",
-			"url": "/account/",
-			"icons": [
-				{ "src": "/src/icons/144x144.png", "sizes": "144x144" },
-				{ "src": "/src/icons/192x192.png", "sizes": "192x192" }
-			]
+			"url": "/c/",
+			"icons": [{ "src": "/src/images/192x192.png", "sizes": "192x192" }]
 		}
 	]
 }
