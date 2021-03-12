@@ -10,15 +10,12 @@ description:
 
 remote_theme: daattali/beautiful-jekyll
 
-avatar: "/src/img/64x64"
+avatar: /src/icons/64x64
 
 navbar-links:
-  About Me: "about"
-  Calendar: "calendar"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  index: pages/index
+  about: pages/about
+  calendar: pages/calendar
 
 social-network-links:
   email: joaquinuriel94@gmail.com
