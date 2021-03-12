@@ -8,7 +8,7 @@ description:
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-# theme: minima
+theme: slate
 
 # github_username:  joaquinuriel
 # instagram_username: joaquinuriel94
@@ -18,4 +18,4 @@ description:
 #   - pages/calendar.md
 #   - pages/about.md
 
-remote_theme: barryclark/jekyll-now
+# remote_theme: barryclark/jekyll-now
