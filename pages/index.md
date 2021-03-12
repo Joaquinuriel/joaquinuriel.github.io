@@ -2,7 +2,6 @@
 title: Index
 desciption: My GitHub generated page
 layout: home
-post: calendar.md
 ---
 
 # Title
@@ -11,9 +10,3 @@ post: calendar.md
 #### I'm not running short of titles
 ##### Fifth title
 ###### Sixth title
-
-{% for page in site.pages %}
-  <h3>{{ page[0] }}</h3>
-{% endfor %}
-
-![image](/src/icons/64x64.png)
