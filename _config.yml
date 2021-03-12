@@ -1,17 +1,26 @@
 title: joaquinuriel.github.io
 
-author: Joaquinuriel
-email: joaquinuriel94@gmail.com
+author: 
+  name: Joaquinuriel
+  email: joaquinuriel94@gmail.com
 
 description:
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
-# theme: minima
 remote_theme: joaquinuriel/minima
 
 minima:
-  skin: dark
+  skin: solarized
+  social_links:
+    github: joaquinuriel
+    instagram: joaquinuriel94
+
+header_pages:
+  - pages/index.md
+  - pages/calendar.md
+  - pages/about.md
+
 
 
