@@ -12,7 +12,6 @@ description:
 remote_theme: joaquinuriel/minima
 
 minima:
-  skin: solarized
   social_links:
     github: joaquinuriel
     instagram: joaquinuriel94
@@ -21,6 +20,3 @@ header_pages:
   - pages/index.md
   - pages/calendar.md
   - pages/about.md
-
-
-
