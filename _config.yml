@@ -9,4 +9,4 @@ description:
   Google search results) and in your feed.xml site description.
 
 # remote_theme: stackbit/stackbit-theme-diy
-remote_theme: stackbit/stackbit-theme-starter
+remote_theme: joaquinuriel/stackbit-theme-starter
