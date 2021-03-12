@@ -18,5 +18,5 @@ description:
 #   - pages/calendar.md
 #   - pages/about.md
 
-# remote_theme: barryclark/jekyll-now
-remote_theme: daattali/beautiful-jekyll
+remote_theme: barryclark/jekyll-now
+# remote_theme: daattali/beautiful-jekyll
