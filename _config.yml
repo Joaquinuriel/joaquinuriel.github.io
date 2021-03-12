@@ -10,7 +10,7 @@ description:
 
 remote_theme: daattali/beautiful-jekyll
 
-avatar: /src/icons/64x64
+avatar: /src/icons/64x64.png
 
 navbar-links:
   index: pages/index
