@@ -10,12 +10,12 @@ description:
 
 remote_theme: daattali/beautiful-jekyll
 
-avatar: /src/icons/64x64.png
+avatar: /src/icons/120x120.png
 
 navbar-links:
   index: pages/index
-  about: pages/about
   calendar: pages/calendar
+  about: pages/about
 
 social-network-links:
   email: joaquinuriel94@gmail.com
