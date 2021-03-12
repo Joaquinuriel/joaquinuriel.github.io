@@ -16,13 +16,15 @@ layout: home
 
 ###### Sixth title
 
-Lorem Ipsum dolor sit amet :heart:
+Lorem Ipsum dolor sit amet
 
 ``` javascript
-const get = async (file) => await new Promise((resolve, reject) => {
-    fetch(file)
-        .then(file => file.json())
-        .then(jason => resolve(jason))
-        .catch(error => reject(error))
-})
+const getJson = async (file) => {
+    return await new Promise((resolve, reject) => {
+        fetch(file)
+            .then(file => file.json())
+            .then(jason => resolve(jason))
+            .catch(error => reject(error))
+    })
+}
 ```
