@@ -1,3 +1,12 @@
+const getIcon = async (icon) =>
+	localStorage.getItem(icon) ||
+	(await fetch(`/src/icons/${icon}.svg`)
+		.then((res) => res.text())
+		.then((txt) => (localStorage.setItem(icon, txt), txt)));
+
+let icons = document.querySelectorAll("s");
+icons.forEach(async (icon) => (icon.outerHTML = await getIcon(icon.innerHTML)));
+
 firebase.initializeApp({
 	apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
 	authDomain: "joaquinuriel.firebaseapp.com",
@@ -8,8 +17,18 @@ firebase.initializeApp({
 	appId: "1:236766090256:web:47ce276a0e7b2c01692695",
 });
 
+let signOutBtn = document.getElementById("sign-out-btn")
+let side = document.querySelector(".side")
+let title = document.querySelector("h1")
+let sign_in_btn = document.querySelector(".main button")
+
 firebase.auth().onAuthStateChanged((user) => {
-	if (user) console.log("user");
+	if (user) {
+		side.style.bottom = "150px"
+		title.textContent = user.displayName
+		sign_in_btn.classList.add("hidden")
+		setTimeout(() => signOutBtn.classList.remove("hidden"), 250)
+	}
 	else console.log("no user");
 });
 
