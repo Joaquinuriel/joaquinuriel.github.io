@@ -17,6 +17,6 @@ minima:
     instagram: joaquinuriel94
 
 header_pages:
-  - pages/index
-  - pages/calendar
-  - pages/about
+  - pages/index.md
+  - pages/calendar.md
+  - pages/about.md
