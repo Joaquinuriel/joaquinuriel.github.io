@@ -1,0 +1,10 @@
+remote_theme: daattali/beautiful-jekyll
+
+navbar-links:
+  index: pages/index
+  calendar: pages/calendar
+  about: pages/about
+
+social-network-links:
+  email: joaquinuriel94@gmail.com
+  github: joaquinuriel
