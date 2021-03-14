@@ -3,7 +3,7 @@ navigator.connection.effectiveType === "4g" || console.log("slow connection");
 
 const getIcon = async (icon) =>
 	localStorage.getItem(icon) ||
-	(await fetch(`/src/ionicons/${icon}.svg`)
+	(await fetch(`/src/icons/${icon}.svg`)
 		.then((res) => res.text())
 		.then((txt) => (localStorage.setItem(icon, txt), txt)));
 
