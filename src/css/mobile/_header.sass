@@ -16,12 +16,16 @@
     backdrop-filter: blur(20px) saturate(2)
     -webkit-backdrop-filter: blur(20px) saturate(2)
 
-    &__title 
+    &__title
         font: 900 24px Montserrat
         font-feature-settings: "ss01"
         color: var(--dark)
 
         margin: 0px
+
+    &__link
+        @extend .header__title
+        text-decoration: none
 
     &__btn 
         margin: 0px
