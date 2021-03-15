@@ -34,16 +34,35 @@
 		<div class="hidden block" id="signed-in">
 			<h2 class="block__subtitle" id="name"></h2>
             <h3 class="block__bar" id="email-text"></h3>
-
-            <button class="block__btn" id="reset-password">
-                <s>mail</s>
-                <p class="block__text">Reset Password</p>
+            <button class="block__btn">
+                <s>options</s>
+                <p class="block__text">Options</p>
             </button>
-			<button class="block__btn" id="sign-out">
+            <button class="block__btn" id="sign-out">
 				<s>log-out</s>
 				<p class="block__text">Sign Out</p>
 			</button>
 		</div>
+
+        <div class="hidden block" id="options">
+            <button class="block__btn">
+                <s>arrow-undo</s>
+                <p class="block__text">Go Back</p>
+            </button>
+            <button class="block__btn" id="change-name">
+                <s>pencil</s>
+                <p class="block__text">Change Name</p>
+            </button>
+            <button class="block__btn" id="reset-password">
+                <s>mail</s>
+                <p class="block__text">Reset Password</p>
+            </button>
+			
+            <button class="block__btn--red" id="delete">
+                <s>trash</s>
+                <p class="block__text">Delete account</p>
+            </button>
+        </div>
 
 		<div class="hidden block--center" id="signing-up">
 			<h4 class="block__gen_title">What's your name?</h4>

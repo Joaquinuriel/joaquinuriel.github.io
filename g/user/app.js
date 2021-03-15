@@ -10,6 +10,7 @@ icons.forEach(async (icon) => (icon.outerHTML = await getIcon(icon.innerHTML)));
 let block_signed_in = document.getElementById("signed-in");
 let block_signed_out = document.getElementById("signed-out");
 let block_signing_up = document.getElementById("signing-up");
+let block_options = document.getElementById("options");
 
 let email_input = document.getElementById("email-input");
 let password_input = document.getElementById("password-input");
@@ -23,8 +24,13 @@ let name_input = block_signing_up.querySelector("input");
 let name_btn = block_signing_up.querySelector("button");
 let no_name_btn = block_signing_up.querySelector("button + button");
 
-let subtitle = document.querySelector("h2");
-let email__text = block_signed_in.querySelector("h3")
+let subtitle = block_signed_in.querySelector("h2");
+let email__text = block_signed_in.querySelector("h3");
+let options_btn = block_signed_in.querySelector("button");
+
+let go_back_btn = block_options.querySelector("button")
+let change_name_btn = document.getElementById("change-name")
+let reset_password_btn = document.getElementById("reset-password")
 
 firebase.initializeApp({
 	apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
@@ -53,7 +59,7 @@ sign_up_btn.addEventListener("click", () => {
 			if (error.code === "auth/email-already-in-use") alert("auth/email-already-in-use");
 			else console.log(error.code);
 		});
-	} else console.log(email, password);
+	} else alert("missing value");
 });
 
 sign_out_btn.addEventListener("click", () => auth.signOut());
@@ -65,14 +71,14 @@ google_btn.addEventListener("click", () => {
 });
 
 name_btn.addEventListener("click", () => {
-    if (name_input.value) {
-        if (name_input.value.length >= 3) {
-            block_signing_up.classList.add("hidden");
-            block_signed_in.classList.remove("hidden");
-            auth.currentUser.updateProfile({ displayName: name_input.value });
-            subtitle.textContent = name_input.value;
-        } else console.log("name too short")
-	} else console.log("no name writter")
+	if (name_input.value) {
+		if (name_input.value.length >= 3) {
+			block_signing_up.classList.add("hidden");
+			block_signed_in.classList.remove("hidden");
+			auth.currentUser.updateProfile({ displayName: name_input.value });
+			subtitle.textContent = name_input.value;
+		} else console.log("name too short");
+	} else console.log("no name writter");
 });
 
 no_name_btn.addEventListener("click", () => {
@@ -80,13 +86,35 @@ no_name_btn.addEventListener("click", () => {
 	block_signed_out.classList.remove("hidden");
 });
 
-auth.onAuthStateChanged((user) => {
+options_btn.addEventListener("click", () => {
+	block_signed_in.classList.add("hidden");
+	block_options.classList.remove("hidden");
+});
+
+go_back_btn.addEventListener("click", () => {
+    block_options.classList.add("hidden")
+    block_signed_in.classList.remove("hidden")
+})
+
+change_name_btn.addEventListener("click", () => {
+    block_options.classList.add("hidden")
+    block_signing_up.classList.remove("hidden")
+})
+
+reset_password_btn.addEventListener("click", () => {
+    // PROMPT USER FOR CONFIRMATION
+})
+
+auth.onAuthStateChanged(async (user) => {
 	if (user) {
 		block_signed_out.classList.add("hidden");
 		if (user.displayName) {
 			block_signed_in.classList.remove("hidden");
-            subtitle.textContent = user.displayName;
-            email__text.textContent = user.email
+			subtitle.textContent = user.displayName;
+			email__text.textContent = user.email;
+			// if (user.emailVerified) {
+			// 	email__text.innerHTML = (await getIcon("checkmark")) + user.email;
+			// } else email__text.innerHTML = (await getIcon("alert")) + user.email;
 		} else {
 			// NO USERNAME
 			block_signing_up.classList.remove("hidden");
