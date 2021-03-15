@@ -34,20 +34,35 @@ body
         @extend .block
         align-items: center
 
-    &__title
+    &__title // h1
         font: 900 36px Montserrat
         color: var(--dark-blue)
 
         margin: 0px
 
-    &__subtitle
+    &__subtitle // h2
         font: bold 36px Montserrat
         color: var(--dark-blue)
 
         width: fit-content // cause it is not centered
         margin: 0px auto
 
-    &__gen_title
+    &__bar // h3
+        font: 500 24px Montserrat
+        text-overflow: ellipsis
+        line-height: 45px
+        color: var(--dark-blue)
+
+        height: 45px
+        margin: 0px
+        padding: 0px 30px
+        border-radius: 30px
+        overflow: hidden
+
+        background: white
+        box-shadow: var(--shadow) var(--dark-blue)
+
+    &__gen_title // h4
         font: bold 24px Montserrat
         color: var(--dark-blue)
 

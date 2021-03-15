@@ -19,7 +19,12 @@ let sign_up_btn = document.getElementById("sign-up");
 let sign_out_btn = document.getElementById("sign-out");
 let google_btn = document.getElementById("google");
 
-let name_title = document.querySelector(".block__subtitle");
+let name_input = block_signing_up.querySelector("input");
+let name_btn = block_signing_up.querySelector("button");
+let no_name_btn = block_signing_up.querySelector("button + button");
+
+let subtitle = document.querySelector("h2");
+let email__text = block_signed_in.querySelector("h3")
 
 firebase.initializeApp({
 	apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
@@ -44,23 +49,10 @@ sign_up_btn.addEventListener("click", () => {
 	let email = email_input.value;
 	let password = password_input.value;
 	if (email && password) {
-		auth.createUserWithEmailAndPassword(email, password)
-			.then(() => {
-				block_signed_in.classList.add("hidden");
-				block_signed_out.classList.add("hidden");
-				block_signing_up.classList.remove("hidden");
-				let btn = block_signing_up.querySelector("button");
-				let value = block_signing_up.querySelector("input").value;
-				btn.addEventListener("click", () => {
-					user.updateProfile({ displayName: value });
-					block_signing_up.classList.add("hidden");
-					block_signed_in.classList.remove("hidden");
-				});
-			})
-			.catch((error) => {
-				if (error.code === "auth/email-already-in-use") alert("auth/email-already-in-use");
-				else console.log(error.code);
-			});
+		auth.createUserWithEmailAndPassword(email, password).catch((error) => {
+			if (error.code === "auth/email-already-in-use") alert("auth/email-already-in-use");
+			else console.log(error.code);
+		});
 	} else console.log(email, password);
 });
 
@@ -72,12 +64,35 @@ google_btn.addEventListener("click", () => {
 		.catch((error) => console.log(error.message));
 });
 
+name_btn.addEventListener("click", () => {
+    if (name_input.value) {
+        if (name_input.value.length >= 3) {
+            block_signing_up.classList.add("hidden");
+            block_signed_in.classList.remove("hidden");
+            auth.currentUser.updateProfile({ displayName: name_input.value });
+            subtitle.textContent = name_input.value;
+        } else console.log("name too short")
+	} else console.log("no name writter")
+});
+
+no_name_btn.addEventListener("click", () => {
+	block_signing_up.classList.add("hidden");
+	block_signed_out.classList.remove("hidden");
+});
+
 auth.onAuthStateChanged((user) => {
-	if (user && user.displayName) {
+	if (user) {
 		block_signed_out.classList.add("hidden");
-		block_signed_in.classList.remove("hidden");
-		name_title.textContent = user.displayName;
+		if (user.displayName) {
+			block_signed_in.classList.remove("hidden");
+            subtitle.textContent = user.displayName;
+            email__text.textContent = user.email
+		} else {
+			// NO USERNAME
+			block_signing_up.classList.remove("hidden");
+		}
 	} else {
+		// NO USER
 		block_signed_in.classList.add("hidden");
 		block_signed_out.classList.remove("hidden");
 	}
