@@ -27,3 +27,13 @@ javascript Logic
                 - signed in block visible
             - else alert name too short
         - alert missing value
+
+- options block
+    - go back btn onclick
+        - options block hidden
+        - signed in block visible
+    - change name btn onclick
+        - options blocm hidden
+        - signing up block visible
+    - reset password btn onclick
+        - 

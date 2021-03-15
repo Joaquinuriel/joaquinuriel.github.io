@@ -28,9 +28,9 @@ let subtitle = block_signed_in.querySelector("h2");
 let email__text = block_signed_in.querySelector("h3");
 let options_btn = block_signed_in.querySelector("button");
 
-let go_back_btn = block_options.querySelector("button")
-let change_name_btn = document.getElementById("change-name")
-let reset_password_btn = document.getElementById("reset-password")
+let go_back_btn = block_options.querySelector("button");
+let change_name_btn = document.getElementById("change-name");
+let reset_password_btn = document.getElementById("reset-password");
 
 firebase.initializeApp({
 	apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
@@ -47,8 +47,8 @@ let auth = firebase.auth();
 sign_in_btn.addEventListener("click", () => {
 	let email = email_input.value;
 	let password = password_input.value;
-	if (email && password) auth.signInWithEmailAndPassword(email, password);
-	else console.log(email, password);
+	if (email && password) auth.signInWithEmailAndPassword(email, password).catch((error) => console.log(error));
+	else alert("missing value");
 });
 
 sign_up_btn.addEventListener("click", () => {
@@ -83,7 +83,9 @@ name_btn.addEventListener("click", () => {
 
 no_name_btn.addEventListener("click", () => {
 	block_signing_up.classList.add("hidden");
-	block_signed_out.classList.remove("hidden");
+	if (auth.currentUser.displayName) {
+		block_signed_in.classList.remove("hidden");
+	} else block_signed_out.classList.remove("hidden");
 });
 
 options_btn.addEventListener("click", () => {
@@ -92,18 +94,18 @@ options_btn.addEventListener("click", () => {
 });
 
 go_back_btn.addEventListener("click", () => {
-    block_options.classList.add("hidden")
-    block_signed_in.classList.remove("hidden")
-})
+	block_options.classList.add("hidden");
+	block_signed_in.classList.remove("hidden");
+});
 
 change_name_btn.addEventListener("click", () => {
-    block_options.classList.add("hidden")
-    block_signing_up.classList.remove("hidden")
-})
+	block_options.classList.add("hidden");
+	block_signing_up.classList.remove("hidden");
+});
 
 reset_password_btn.addEventListener("click", () => {
-    // PROMPT USER FOR CONFIRMATION
-})
+	// PROMPT USER FOR CONFIRMATION
+});
 
 auth.onAuthStateChanged(async (user) => {
 	if (user) {
