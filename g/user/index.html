@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User</title>
+		<link rel="stylesheet" href="/g/user/style.min.css" />
+		<script defer src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+		<script defer src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+		<script defer src="/g/user/app.js"></script>
+	</head>
+	<body>
+		<div class="block--center" id="signed-out">
+			<h1 class="block__title">Ingresar</h1>
+			<input type="text" class="block__input" id="email-input" placeholder="email" />
+			<input type="password" class="block__input" id="password-input" placeholder="password" />
+			<div class="flex">
+				<button class="block__btn" id="sign-in">
+					<s>log-in</s>
+					<p class="block__text">Sign In</p>
+				</button>
+				<button class="block__btn" id="sign-up">
+					<s>add</s>
+					<p class="block__text">Sign Up</p>
+				</button>
+			</div>
+			<button class="block__btn" id="google">
+				<s>logo-google</s>
+				<p class="block__text">Google</p>
+			</button>
+		</div>
+        <div class="hidden block" id="signed-in">
+            <h2 class="block__subtitle" id="name"></h2>
+            <button class="block__btn" id="sign-out">
+                <s>log-out</s>
+                <p class="block__text">Sign Out</p>
+            </button>
+        </div>
+        <div class="hidden block" id="signing-up">
+            <h4 class="block__gen_title">What's your name?</h4>
+            <input type="text" class="block__input" id="name-input" placeholder="Username">
+            <button class="block__btn">Siguiente</button>
+        </div>
+	</body>
+</html>

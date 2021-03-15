@@ -5,4 +5,3 @@ const toggleNav = () => {
 }
 
 btn.addEventListener("click", toggleNav)
-
