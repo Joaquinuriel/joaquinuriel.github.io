@@ -45,15 +45,17 @@ sign_up_btn.addEventListener("click", () => {
 	let password = password_input.value;
 	if (email && password) {
 		auth.createUserWithEmailAndPassword(email, password)
-            .then(() => {
-                block_signed_in.classList.add("hidden")
+			.then(() => {
+				block_signed_in.classList.add("hidden");
 				block_signed_out.classList.add("hidden");
-                block_signing_up.classList.remove("hidden");
-                let btn = block_signing_up.querySelector("button")
-                btn.addEventListener("click", () => {
-                    block_signing_up.classList.add("hidden");
-                    block_signed_in.classList.remove("hidden")
-                })
+				block_signing_up.classList.remove("hidden");
+				let btn = block_signing_up.querySelector("button");
+				let value = block_signing_up.querySelector("input").value;
+				btn.addEventListener("click", () => {
+					user.updateProfile({ displayName: value });
+					block_signing_up.classList.add("hidden");
+					block_signed_in.classList.remove("hidden");
+				});
 			})
 			.catch((error) => {
 				if (error.code === "auth/email-already-in-use") alert("auth/email-already-in-use");
