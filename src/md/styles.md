@@ -41,5 +41,6 @@
     - opacity
 
 - misc
+    - cursor
     - transform
     - transition

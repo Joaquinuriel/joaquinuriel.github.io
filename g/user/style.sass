@@ -127,6 +127,8 @@ body
         border: none 
         outline: none
 
+        cursor: pointer
+
         &--center 
             @extend .block__btn
             align-self: center
@@ -134,14 +136,14 @@ body
         &--red
             @extend .block__btn
             background: var(--red)
-            box-shadow: none
+            box-shadow: var(--shadow) white
 
         &--red .block__text
             color: white
 
         &--red svg
-            color: white
-            fill: white
+            color: white !important
+            fill: white !important
 
     &__text
         font: 500 medium Montserrat
