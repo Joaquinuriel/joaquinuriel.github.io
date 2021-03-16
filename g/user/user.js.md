@@ -36,4 +36,3 @@ javascript Logic
         - options blocm hidden
         - signing up block visible
     - reset password btn onclick
-        - 
