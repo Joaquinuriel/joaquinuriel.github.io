@@ -11,7 +11,12 @@
 		<script defer src="/g/user/app.js"></script>
 	</head>
 	<body>
-		<div class="block--center" id="signed-out">
+		<header class="header">
+			<a href="/" class="header__title">Uriel</a>
+			<button class="header__btn"><s>menu</s></button>
+		</header>
+
+		<div class="block" id="signed-out">
 			<h1 class="block__title">Ingresar</h1>
 			<input type="text" class="block__input" id="email-input" placeholder="email" />
 			<input type="password" class="block__input" id="password-input" placeholder="password" />
@@ -25,7 +30,7 @@
 					<p class="block__text">Sign Up</p>
 				</button>
 			</div>
-			<button class="block__btn" id="google">
+			<button class="block__btn--center" id="google">
 				<s>logo-google</s>
 				<p class="block__text">Google</p>
 			</button>
@@ -33,48 +38,57 @@
 
 		<div class="hidden block" id="signed-in">
 			<h2 class="block__subtitle" id="name"></h2>
-            <h3 class="block__bar" id="email-text"></h3>
-            <button class="block__btn">
-                <s>options</s>
-                <p class="block__text">Options</p>
-            </button>
-            <button class="block__btn" id="sign-out">
+			<h3 class="block__bar" id="email-text" hidden></h3>
+			<button class="block__btn">
+				<s>options</s>
+				<p class="block__text">Options</p>
+			</button>
+			<button class="block__btn" id="sign-out">
 				<s>log-out</s>
 				<p class="block__text">Sign Out</p>
 			</button>
 		</div>
 
-        <div class="hidden block" id="options">
-            <button class="block__btn">
-                <s>arrow-undo</s>
-                <p class="block__text">Go Back</p>
-            </button>
-            <button class="block__btn" id="change-name">
-                <s>pencil</s>
-                <p class="block__text">Change Name</p>
-            </button>
-            <button class="block__btn" id="reset-password">
-                <s>mail</s>
-                <p class="block__text">Reset Password</p>
-            </button>
-			
-            <button class="block__btn--red" id="delete">
-                <s>trash</s>
-                <p class="block__text">Delete account</p>
-            </button>
-        </div>
+		<div class="hidden block" id="options">
+			<h4 class="block__gen_title">Options</h4>
+			<button class="block__btn">
+				<s>arrow-undo</s>
+				<p class="block__text">Go Back</p>
+			</button>
+			<button class="block__btn" id="change-name">
+				<s>pencil</s>
+				<p class="block__text">Change Name</p>
+			</button>
+			<button class="block__btn" id="reset-password">
+				<s>mail</s>
+				<p class="block__text">Reset Password</p>
+			</button>
 
-		<div class="hidden block--center" id="signing-up">
+			<button class="block__btn--red" id="delete">
+				<s>trash</s>
+				<p class="block__text">Delete User</p>
+			</button>
+		</div>
+
+		<div class="hidden block" id="signing-up">
 			<h4 class="block__gen_title">What's your name?</h4>
 			<input type="text" class="block__input" id="name-input" placeholder="Username" />
-			<button class="block__btn">
-				<s>arrow-forward</s>
-				<p class="block__text">Next</p>
-			</button>
-			<button class="block__btn">
-				<s>arrow-back</s>
-				<p class="block__text">Back</p>
-			</button>
+			<div class="flex">
+				<button class="block__btn">
+					<s>arrow-undo</s>
+					<p class="block__text">Back</p>
+				</button>
+				<button class="block__btn">
+					<s>checkmark</s>
+					<p class="block__text">Confirm</p>
+				</button>
+			</div>
+		</div>
+
+		<div class="toast toast--hidden" id="toast">
+			<p class="toast__text"></p>
+			<button class="toast__btn"><s>close</s></button>
+			<button class="toast__btn"><s>send</s></button>
 		</div>
 	</body>
 </html>

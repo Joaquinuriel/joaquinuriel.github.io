@@ -7,6 +7,38 @@ const getIcon = async (icon) =>
 let icons = document.querySelectorAll("s");
 icons.forEach(async (icon) => (icon.outerHTML = await getIcon(icon.innerHTML)));
 
+let toast = document.getElementById("toast");
+let toast_text = toast.querySelector("p");
+let toast_cancel = toast.querySelector("button");
+let toast_accept = toast.querySelector("button + button");
+
+const say = (thing) => {
+	toast_text.textContent = thing;
+	toast_accept.hidden = true;
+	toast.classList.remove("toast--hidden");
+};
+
+const ask = async (thing) => {
+	toast_text.hidden = false;
+	toast_text.textContent = thing;
+	toast_accept.hidden = false;
+	toast.classList.remove("toast--hidden");
+	return await new Promise((resolve) => {
+		toast_accept.onclick = () => {
+			hideToast();
+			resolve(true);
+		};
+		toast_cancel.onclick = () => {
+			hideToast();
+			resolve(false);
+		};
+	});
+};
+
+const hideToast = () => {
+	toast.classList.add("toast--hidden");
+};
+
 let block_signed_in = document.getElementById("signed-in");
 let block_signed_out = document.getElementById("signed-out");
 let block_signing_up = document.getElementById("signing-up");
@@ -21,8 +53,8 @@ let sign_out_btn = document.getElementById("sign-out");
 let google_btn = document.getElementById("google");
 
 let name_input = block_signing_up.querySelector("input");
-let name_btn = block_signing_up.querySelector("button");
-let no_name_btn = block_signing_up.querySelector("button + button");
+let name_btn = block_signing_up.querySelector("button + button");
+let no_name_btn = block_signing_up.querySelector("button");
 
 let subtitle = block_signed_in.querySelector("h2");
 let email__text = block_signed_in.querySelector("h3");
@@ -31,6 +63,7 @@ let options_btn = block_signed_in.querySelector("button");
 let go_back_btn = block_options.querySelector("button");
 let change_name_btn = document.getElementById("change-name");
 let reset_password_btn = document.getElementById("reset-password");
+let delete_account_btn = document.getElementById("delete");
 
 firebase.initializeApp({
 	apiKey: "AIzaSyCqepuZoUpFqbkqtPs_hbPynIUFcJjrqfc",
@@ -75,6 +108,7 @@ name_btn.addEventListener("click", () => {
 		if (name_input.value.length >= 3) {
 			block_signing_up.classList.add("hidden");
 			block_signed_in.classList.remove("hidden");
+			name_input.textContent = null;
 			auth.currentUser.updateProfile({ displayName: name_input.value });
 			subtitle.textContent = name_input.value;
 		} else console.log("name too short");
@@ -83,8 +117,9 @@ name_btn.addEventListener("click", () => {
 
 no_name_btn.addEventListener("click", () => {
 	block_signing_up.classList.add("hidden");
+	name_input.textContent = null;
 	if (auth.currentUser.displayName) {
-		block_signed_in.classList.remove("hidden");
+		block_options.classList.remove("hidden");
 	} else block_signed_out.classList.remove("hidden");
 });
 
@@ -103,8 +138,16 @@ change_name_btn.addEventListener("click", () => {
 	block_signing_up.classList.remove("hidden");
 });
 
-reset_password_btn.addEventListener("click", () => {
-	// PROMPT USER FOR CONFIRMATION
+reset_password_btn.addEventListener("click", async () => {
+	ask("Reset Password?").then((boolean) => {
+		if (boolean) auth.sendPasswordResetEmail(auth.currentUser.email);
+	});
+});
+
+delete_account_btn.addEventListener("click", () => {
+	ask("Delete User?").then((boolean) => {
+		if (boolean) auth.currentUser.delete();
+	});
 });
 
 auth.onAuthStateChanged(async (user) => {

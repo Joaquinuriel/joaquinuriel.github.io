@@ -14,16 +14,46 @@ body
     height: 100vh
     margin: 0px 
 
-    display: flex 
-    align-items: center
-    justify-content: center
-
     background: var(--background)
+
+.header
+    position: fixed
+    top: 0px
+    left: 0px
+    right: 0px
+
+    height: 60px
+    padding: 0px 30px
+
+    display: flex
+
+    background: white
+    box-shadow: var(--shadow) var(--dark-blue)
+
+    &__title
+        font: 900 24px Montserrat
+        text-decoration: none
+        color: var(--dark-blue)
+        margin: auto auto auto 0px
+
+    &__btn
+        all: initial
+
+    svg 
+        width: 36px
+        height: 36px
 
 .block
     position: fixed
+    top: 60px
+    bottom: 0px
     left: 30px
     right: 30px 
+
+    width: fit-content
+    height: fit-content
+    max-width: calc( 100% - 60px )
+    margin: auto
 
     display: flex 
     flex-direction: column
@@ -31,15 +61,13 @@ body
 
     transition: var(--fast)
 
-    &--center
-        @extend .block
-        align-items: center
+    
 
     &__title // h1
         font: 900 36px Montserrat
         color: var(--dark-blue)
 
-        margin: 0px
+        margin: 0px auto
 
     &__subtitle // h2
         font: bold 36px Montserrat
@@ -67,12 +95,12 @@ body
         font: bold 24px Montserrat
         color: var(--dark-blue)
 
-        margin: 0px
+        margin: 0px auto
 
     &__input 
         font: small Montserrat
 
-        width: 100%
+        // width: 100%
         height: 45px
         box-sizing: border-box
         padding: 0px 30px
@@ -98,6 +126,10 @@ body
         box-shadow: var(--shadow) var(--dark-blue)
         border: none 
         outline: none
+
+        &--center 
+            @extend .block__btn
+            align-self: center
 
         &--red
             @extend .block__btn
@@ -125,8 +157,68 @@ body
 
 .flex 
     display: flex
+    flex-wrap: wrap
+    justify-content: center
     gap: 30px
 
+.toast
+    position: fixed
+    top: 90px
+    left: 45px
+    right: 45px
+
+    height: 60px
+    padding: 0px 30px
+    border-radius: 30px
+
+    display: flex 
+    align-items: center
+
+    background: var(--blue)
+
+    transition: var(--fast)
+
+    &--hidden
+        top: 0px
+        visibility: hidden 
+        opacity: 0
+
+    &__text
+        font: large Montserrat
+        color: white
+
+        margin: auto
+
+    &__input
+        font: small Montserrat 
+
+        height: 60px
+        padding: 0px
+
+        background: none 
+        border: none 
+        outline: none 
+
+        &::placeholder 
+            color: white
+
+    &__btn
+        width: 45px
+        height: 60px
+        padding: 0px 
+
+        background: none 
+        border: none 
+        outline: none
+
+    svg 
+        color: white 
+        fill: white 
+
+        width: 24px 
+        height: 24px
+        margin: auto
+    
 .hidden
     visibility: hidden
     opacity: 0
